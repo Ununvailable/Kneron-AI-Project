@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:usb_serial/usb_serial.dart';
 
 void main() {
   runApp(const MyApp());
