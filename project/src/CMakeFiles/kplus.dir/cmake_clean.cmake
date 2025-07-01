@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "../bin/library/lib/libkplus.dll"
+  "../bin/library/lib/libkplus.dll.manifest"
+  "../bin/library/lib/libkplus.pdb"
+  "CMakeFiles/kplus.dir/kne_reader.c.obj"
+  "CMakeFiles/kplus.dir/kne_reader.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_core.c.obj"
+  "CMakeFiles/kplus.dir/kp_core.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_errstring.c.obj"
+  "CMakeFiles/kplus.dir/kp_errstring.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_inference.c.obj"
+  "CMakeFiles/kplus.dir/kp_inference.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_set_key.c.obj"
+  "CMakeFiles/kplus.dir/kp_set_key.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_update_flash.c.obj"
+  "CMakeFiles/kplus.dir/kp_update_flash.c.obj.d"
+  "CMakeFiles/kplus.dir/kp_usb.c.obj"
+  "CMakeFiles/kplus.dir/kp_usb.c.obj.d"
+  "CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj"
+  "CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj.d"
+  "CMakeFiles/kplus.dir/model_descriptor_builder.c.obj"
+  "CMakeFiles/kplus.dir/model_descriptor_builder.c.obj.d"
+  "CMakeFiles/kplus.dir/model_descriptor_copier.c.obj"
+  "CMakeFiles/kplus.dir/model_descriptor_copier.c.obj.d"
+  "CMakeFiles/kplus.dir/model_reader_utils.c.obj"
+  "CMakeFiles/kplus.dir/model_reader_utils.c.obj.d"
+  "CMakeFiles/kplus.dir/nef_reader.c.obj"
+  "CMakeFiles/kplus.dir/nef_reader.c.obj.d"
+  "CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj"
+  "CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj.d"
+  "CMakeFiles/kplus.dir/setup_reader.c.obj"
+  "CMakeFiles/kplus.dir/setup_reader.c.obj.d"
+  "CMakeFiles/kplus.dir/utils.c.obj"
+  "CMakeFiles/kplus.dir/utils.c.obj.d"
+  "libkplus.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/kplus.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

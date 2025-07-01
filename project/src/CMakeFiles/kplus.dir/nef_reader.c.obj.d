@@ -1,0 +1,53 @@
+src/CMakeFiles/kplus.dir/nef_reader.c.obj: \
+ E:/Kneron-AI-Project/src/nef_reader.c \
+ E:/Kneron-AI-Project/src/include/local/internal_func.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+ E:/msys64/mingw64/include/stddef.h E:/msys64/mingw64/include/crtdefs.h \
+ E:/msys64/mingw64/include/corecrt.h E:/msys64/mingw64/include/_mingw.h \
+ E:/msys64/mingw64/include/_mingw_mac.h \
+ E:/msys64/mingw64/include/_mingw_secapi.h \
+ E:/msys64/mingw64/include/vadefs.h \
+ E:/msys64/mingw64/include/sdks/_mingw_ddk.h \
+ E:/Kneron-AI-Project/include/kp_struct.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
+ E:/msys64/mingw64/include/stdint.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdbool.h \
+ E:/Kneron-AI-Project/src/include/local/kneron_nef_reader.h \
+ E:/Kneron-AI-Project/src/include/local/flatbuffers_common_reader.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_prologue.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pdiagnostic_push.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pdiagnostic.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_flatbuffers.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pstatic_assert.h \
+ E:/msys64/mingw64/include/assert.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pwarnings.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pstdalign.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdalign.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/paligned_alloc.h \
+ E:/msys64/mingw64/include/stdlib.h \
+ E:/msys64/mingw64/include/corecrt_wstdlib.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/syslimits.h \
+ E:/msys64/mingw64/include/limits.h \
+ E:/msys64/mingw64/include/sec_api/stdlib_s.h \
+ E:/msys64/mingw64/include/malloc.h \
+ E:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mm_malloc.h \
+ E:/msys64/mingw64/include/errno.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_alloc.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/paligned_alloc.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_assert.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pendian.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pendian_detect.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_types.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_endian.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_accessors.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_identifier.h \
+ E:/msys64/mingw64/include/string.h \
+ E:/msys64/mingw64/include/sec_api/string_s.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/flatcc_epilogue.h \
+ E:/Kneron-AI-Project/src/include/local/flatcc/portable/pdiagnostic_pop.h \
+ E:/msys64/mingw64/include/stdio.h \
+ E:/msys64/mingw64/include/corecrt_stdio_config.h \
+ E:/msys64/mingw64/include/_mingw_off_t.h \
+ E:/msys64/mingw64/include/swprintf.inl \
+ E:/msys64/mingw64/include/sec_api/stdio_s.h
