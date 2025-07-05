@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -133,20 +133,43 @@ app_lib/yolo/clean: app_lib/yolo/CMakeFiles/kapp_yolo.dir/clean
 # Directory level rules for directory project
 
 # Recursive "all" directory target.
+project/all: project/kl520_demo_cam_generic_image_inference_drop_frame/all
 project/all: project/listing_device/all
 .PHONY : project/all
 
 # Recursive "codegen" directory target.
+project/codegen: project/kl520_demo_cam_generic_image_inference_drop_frame/codegen
 project/codegen: project/listing_device/codegen
 .PHONY : project/codegen
 
 # Recursive "preinstall" directory target.
+project/preinstall: project/kl520_demo_cam_generic_image_inference_drop_frame/preinstall
 project/preinstall: project/listing_device/preinstall
 .PHONY : project/preinstall
 
 # Recursive "clean" directory target.
+project/clean: project/kl520_demo_cam_generic_image_inference_drop_frame/clean
 project/clean: project/listing_device/clean
 .PHONY : project/clean
+
+#=============================================================================
+# Directory level rules for directory project/kl520_demo_cam_generic_image_inference_drop_frame
+
+# Recursive "all" directory target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/all: project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/all
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/all
+
+# Recursive "codegen" directory target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/codegen: project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/codegen
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/codegen
+
+# Recursive "preinstall" directory target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/preinstall:
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/preinstall
+
+# Recursive "clean" directory target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/clean: project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/clean
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/clean
 
 #=============================================================================
 # Directory level rules for directory project/listing_device
@@ -250,14 +273,14 @@ tools/DFUT/DFUT_console/clean:
 CMakeFiles/copy_dll_files.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_dll_files.dir/build.make CMakeFiles/copy_dll_files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_dll_files.dir/build.make CMakeFiles/copy_dll_files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num= "Built target copy_dll_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num= "Built target copy_dll_files"
 .PHONY : CMakeFiles/copy_dll_files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/copy_dll_files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/copy_dll_files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : CMakeFiles/copy_dll_files.dir/rule
 
 # Convenience name for target.
@@ -267,7 +290,7 @@ copy_dll_files: CMakeFiles/copy_dll_files.dir/rule
 # codegen rule for target.
 CMakeFiles/copy_dll_files.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_dll_files.dir/build.make CMakeFiles/copy_dll_files.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num= "Finished codegen for target copy_dll_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num= "Finished codegen for target copy_dll_files"
 .PHONY : CMakeFiles/copy_dll_files.dir/codegen
 
 # clean rule for target.
@@ -282,14 +305,14 @@ CMakeFiles/copy_dll_files.dir/clean:
 src/CMakeFiles/kplus.dir/all: CMakeFiles/copy_dll_files.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target kplus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target kplus"
 .PHONY : src/CMakeFiles/kplus.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/kplus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kplus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : src/CMakeFiles/kplus.dir/rule
 
 # Convenience name for target.
@@ -299,7 +322,7 @@ kplus: src/CMakeFiles/kplus.dir/rule
 # codegen rule for target.
 src/CMakeFiles/kplus.dir/codegen: CMakeFiles/copy_dll_files.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Finished codegen for target kplus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Finished codegen for target kplus"
 .PHONY : src/CMakeFiles/kplus.dir/codegen
 
 # clean rule for target.
@@ -314,14 +337,14 @@ src/CMakeFiles/kplus.dir/clean:
 app_lib/yolo/CMakeFiles/kapp_yolo.dir/all: src/CMakeFiles/kplus.dir/all
 	$(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/depend
 	$(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=1,2,3 "Built target kapp_yolo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=1,2,3 "Built target kapp_yolo"
 .PHONY : app_lib/yolo/CMakeFiles/kapp_yolo.dir/all
 
 # Build rule for subdir invocation for target.
 app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/CMakeFiles/kapp_yolo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
 
 # Convenience name for target.
@@ -331,7 +354,7 @@ kapp_yolo: app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
 # codegen rule for target.
 app_lib/yolo/CMakeFiles/kapp_yolo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=1,2,3 "Finished codegen for target kapp_yolo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=1,2,3 "Finished codegen for target kapp_yolo"
 .PHONY : app_lib/yolo/CMakeFiles/kapp_yolo.dir/codegen
 
 # clean rule for target.
@@ -340,20 +363,52 @@ app_lib/yolo/CMakeFiles/kapp_yolo.dir/clean:
 .PHONY : app_lib/yolo/CMakeFiles/kapp_yolo.dir/clean
 
 #=============================================================================
+# Target rules for target project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir
+
+# All Build rule for target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/all: src/CMakeFiles/kplus.dir/all
+	$(MAKE) $(MAKESILENT) -f project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build.make project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/depend
+	$(MAKE) $(MAKESILENT) -f project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build.make project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=4,5,6,7 "Built target kl520_demo_cam_generic_image_inference_drop_frame"
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/all
+
+# Build rule for subdir invocation for target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/rule
+
+# Convenience name for target.
+kl520_demo_cam_generic_image_inference_drop_frame: project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/rule
+.PHONY : kl520_demo_cam_generic_image_inference_drop_frame
+
+# codegen rule for target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build.make project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=4,5,6,7 "Finished codegen for target kl520_demo_cam_generic_image_inference_drop_frame"
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/codegen
+
+# clean rule for target.
+project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/clean:
+	$(MAKE) $(MAKESILENT) -f project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build.make project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/clean
+.PHONY : project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/clean
+
+#=============================================================================
 # Target rules for target project/listing_device/CMakeFiles/listing_device.dir
 
 # All Build rule for target.
 project/listing_device/CMakeFiles/listing_device.dir/all: src/CMakeFiles/kplus.dir/all
 	$(MAKE) $(MAKESILENT) -f project/listing_device/CMakeFiles/listing_device.dir/build.make project/listing_device/CMakeFiles/listing_device.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/listing_device/CMakeFiles/listing_device.dir/build.make project/listing_device/CMakeFiles/listing_device.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=20,21,22 "Built target listing_device"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=24,25,26,27 "Built target listing_device"
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/all
 
 # Build rule for subdir invocation for target.
 project/listing_device/CMakeFiles/listing_device.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/listing_device/CMakeFiles/listing_device.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/rule
 
 # Convenience name for target.
@@ -363,7 +418,7 @@ listing_device: project/listing_device/CMakeFiles/listing_device.dir/rule
 # codegen rule for target.
 project/listing_device/CMakeFiles/listing_device.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f project/listing_device/CMakeFiles/listing_device.dir/build.make project/listing_device/CMakeFiles/listing_device.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=20,21,22 "Finished codegen for target listing_device"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=24,25,26,27 "Finished codegen for target listing_device"
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/codegen
 
 # clean rule for target.

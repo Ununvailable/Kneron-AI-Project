@@ -39,28 +39,28 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/kneron-ai-project/project/src/cmake_install.cmake")
+  include("E:/Kneron-AI-Project/project/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/kneron-ai-project/project/app_lib/cmake_install.cmake")
+  include("E:/Kneron-AI-Project/project/app_lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/kneron-ai-project/project/project/cmake_install.cmake")
+  include("E:/Kneron-AI-Project/project/project/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/kneron-ai-project/project/tools/cmake_install.cmake")
+  include("E:/Kneron-AI-Project/project/tools/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "E:/kneron-ai-project/project/install_local_manifest.txt"
+  file(WRITE "E:/Kneron-AI-Project/project/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -76,6 +76,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "E:/kneron-ai-project/project/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "E:/Kneron-AI-Project/project/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

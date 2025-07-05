@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 # Include any dependencies generated for this target.
 include project/listing_device/CMakeFiles/listing_device.dir/depend.make
@@ -72,61 +72,92 @@ include project/listing_device/CMakeFiles/listing_device.dir/flags.make
 project/listing_device/CMakeFiles/listing_device.dir/codegen:
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/codegen
 
-project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj: project/listing_device/CMakeFiles/listing_device.dir/flags.make
-project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj: listing_device/listing_device.c
-project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj: project/listing_device/CMakeFiles/listing_device.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj -MF CMakeFiles/listing_device.dir/listing_device.c.obj.d -o CMakeFiles/listing_device.dir/listing_device.c.obj -c /E/Kneron-AI-Project/project/listing_device/listing_device.c
+project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj: project/listing_device/CMakeFiles/listing_device.dir/flags.make
+project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj: listing_device/listing_device.cpp
+project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj: project/listing_device/CMakeFiles/listing_device.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj -MF CMakeFiles/listing_device.dir/listing_device.cpp.obj.d -o CMakeFiles/listing_device.dir/listing_device.cpp.obj -c /E/Kneron-AI-Project/project/listing_device/listing_device.cpp
 
-project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/listing_device.dir/listing_device.c.i"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/project/listing_device/listing_device.c > CMakeFiles/listing_device.dir/listing_device.c.i
+project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/listing_device.dir/listing_device.cpp.i"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /E/Kneron-AI-Project/project/listing_device/listing_device.cpp > CMakeFiles/listing_device.dir/listing_device.cpp.i
 
-project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/listing_device.dir/listing_device.c.s"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/project/listing_device/listing_device.c -o CMakeFiles/listing_device.dir/listing_device.c.s
+project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/listing_device.dir/listing_device.cpp.s"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /E/Kneron-AI-Project/project/listing_device/listing_device.cpp -o CMakeFiles/listing_device.dir/listing_device.cpp.s
 
 project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj: project/listing_device/CMakeFiles/listing_device.dir/flags.make
 project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj: E:/Kneron-AI-Project/ex_common/helper_functions.c
 project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj: project/listing_device/CMakeFiles/listing_device.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj -MF CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj.d -o CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj -c /E/Kneron-AI-Project/ex_common/helper_functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj -MF CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj.d -o CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj -c /E/Kneron-AI-Project/ex_common/helper_functions.c
 
 project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.i"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/ex_common/helper_functions.c > CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.i
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/ex_common/helper_functions.c > CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.i
 
 project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.s"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/ex_common/helper_functions.c -o CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.s
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/ex_common/helper_functions.c -o CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.s
+
+project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj: project/listing_device/CMakeFiles/listing_device.dir/flags.make
+project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj: E:/Kneron-AI-Project/ex_common/postprocess.c
+project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj: project/listing_device/CMakeFiles/listing_device.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj -MF CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj.d -o CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj -c /E/Kneron-AI-Project/ex_common/postprocess.c
+
+project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.i"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/ex_common/postprocess.c > CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.i
+
+project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.s"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/ex_common/postprocess.c -o CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.s
 
 # Object files for target listing_device
 listing_device_OBJECTS = \
-"CMakeFiles/listing_device.dir/listing_device.c.obj" \
-"CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj"
+"CMakeFiles/listing_device.dir/listing_device.cpp.obj" \
+"CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj" \
+"CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj"
 
 # External object files for target listing_device
 listing_device_EXTERNAL_OBJECTS =
 
-bin/listing_device.exe: project/listing_device/CMakeFiles/listing_device.dir/listing_device.c.obj
+bin/listing_device.exe: project/listing_device/CMakeFiles/listing_device.dir/listing_device.cpp.obj
 bin/listing_device.exe: project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/helper_functions.c.obj
+bin/listing_device.exe: project/listing_device/CMakeFiles/listing_device.dir/__/__/ex_common/postprocess.c.obj
 bin/listing_device.exe: project/listing_device/CMakeFiles/listing_device.dir/build.make
 bin/listing_device.exe: src/libkplus.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_gapi455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_highgui455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_ml455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_objdetect455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_photo455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_stitching455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_video455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_videoio455.dll.a
 bin/listing_device.exe: E:/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../../bin/listing_device.exe"
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/listing_device.dir/objects.a
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/ar.exe qc CMakeFiles/listing_device.dir/objects.a $(listing_device_OBJECTS) $(listing_device_EXTERNAL_OBJECTS)
-	cd /E/kneron-ai-project/project/project/listing_device && /E/msys64/mingw64/bin/cc.exe  -std=gnu99 -Werror -Wall -Wl,--whole-archive CMakeFiles/listing_device.dir/objects.a -Wl,--no-whole-archive -o ../../bin/listing_device.exe -Wl,--out-implib,liblisting_device.dll.a -Wl,--major-image-version,0,--minor-image-version,0  ../../src/libkplus.dll.a -lusb-1.0 -lpthread -lws2_32 /E/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_imgcodecs455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_dnn455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_calib3d455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_features2d455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_flann455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_imgproc455.dll.a
+bin/listing_device.exe: C:/opencv_455/x64/mingw/lib/libopencv_core455.dll.a
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/listing_device.exe"
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/listing_device.dir/objects.a
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/ar.exe qc CMakeFiles/listing_device.dir/objects.a $(listing_device_OBJECTS) $(listing_device_EXTERNAL_OBJECTS)
+	cd /E/Kneron-AI-Project/project/project/listing_device && /E/msys64/mingw64/bin/c++.exe -Wl,--whole-archive CMakeFiles/listing_device.dir/objects.a -Wl,--no-whole-archive -o ../../bin/listing_device.exe -Wl,--out-implib,liblisting_device.dll.a -Wl,--major-image-version,0,--minor-image-version,0  ../../src/libkplus.dll.a -lusb-1.0 /C/opencv_455/x64/mingw/lib/libopencv_gapi455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_highgui455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_ml455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_objdetect455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_photo455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_stitching455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_video455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_videoio455.dll.a -lpthread -lws2_32 /E/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll -lm /C/opencv_455/x64/mingw/lib/libopencv_imgcodecs455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_dnn455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_calib3d455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_features2d455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_flann455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_imgproc455.dll.a /C/opencv_455/x64/mingw/lib/libopencv_core455.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 # Rule to build all files generated by this target.
 project/listing_device/CMakeFiles/listing_device.dir/build: bin/listing_device.exe
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/build
 
 project/listing_device/CMakeFiles/listing_device.dir/clean:
-	cd /E/kneron-ai-project/project/project/listing_device && $(CMAKE_COMMAND) -P CMakeFiles/listing_device.dir/cmake_clean.cmake
+	cd /E/Kneron-AI-Project/project/project/listing_device && $(CMAKE_COMMAND) -P CMakeFiles/listing_device.dir/cmake_clean.cmake
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/clean
 
 project/listing_device/CMakeFiles/listing_device.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project/project/listing_device /E/kneron-ai-project/project /E/kneron-ai-project/project/project/listing_device /E/kneron-ai-project/project/project/listing_device/CMakeFiles/listing_device.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project/project/listing_device /E/Kneron-AI-Project/project /E/Kneron-AI-Project/project/project/listing_device /E/Kneron-AI-Project/project/project/listing_device/CMakeFiles/listing_device.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : project/listing_device/CMakeFiles/listing_device.dir/depend
 

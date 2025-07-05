@@ -1,15 +1,16 @@
 {
 	"InstallScripts" : 
 	[
-		"E:/kneron-ai-project/project/cmake_install.cmake",
-		"E:/kneron-ai-project/project/src/cmake_install.cmake",
-		"E:/kneron-ai-project/project/app_lib/cmake_install.cmake",
-		"E:/kneron-ai-project/project/app_lib/yolo/cmake_install.cmake",
-		"E:/kneron-ai-project/project/project/cmake_install.cmake",
-		"E:/kneron-ai-project/project/project/listing_device/cmake_install.cmake",
-		"E:/kneron-ai-project/project/tools/cmake_install.cmake",
-		"E:/kneron-ai-project/project/tools/DFUT/cmake_install.cmake",
-		"E:/kneron-ai-project/project/tools/DFUT/DFUT_console/cmake_install.cmake"
+		"E:/Kneron-AI-Project/project/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/src/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/app_lib/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/app_lib/yolo/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/project/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/project/kl520_demo_cam_generic_image_inference_drop_frame/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/project/listing_device/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/tools/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/tools/DFUT/cmake_install.cmake",
+		"E:/Kneron-AI-Project/project/tools/DFUT/DFUT_console/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

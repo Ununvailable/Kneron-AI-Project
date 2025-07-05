@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,21 +87,21 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/app_lib//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/app_lib//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/app_lib//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/app_lib//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
 clean:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/clean
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -110,17 +110,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -143,6 +143,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
@@ -163,6 +163,19 @@ kapp_yolo/fast:
 .PHONY : kapp_yolo/fast
 
 #=============================================================================
+# Target rules for targets named kl520_demo_cam_generic_image_inference_drop_frame
+
+# Build rule for target.
+kl520_demo_cam_generic_image_inference_drop_frame: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kl520_demo_cam_generic_image_inference_drop_frame
+.PHONY : kl520_demo_cam_generic_image_inference_drop_frame
+
+# fast build rule for target.
+kl520_demo_cam_generic_image_inference_drop_frame/fast:
+	$(MAKE) $(MAKESILENT) -f project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build.make project/kl520_demo_cam_generic_image_inference_drop_frame/CMakeFiles/kl520_demo_cam_generic_image_inference_drop_frame.dir/build
+.PHONY : kl520_demo_cam_generic_image_inference_drop_frame/fast
+
+#=============================================================================
 # Target rules for targets named listing_device
 
 # Build rule for target.
@@ -186,6 +199,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... copy_dll_files"
 	@echo "... kapp_yolo"
+	@echo "... kl520_demo_cam_generic_image_inference_drop_frame"
 	@echo "... kplus"
 	@echo "... listing_device"
 .PHONY : help

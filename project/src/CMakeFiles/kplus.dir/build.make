@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/kplus.dir/depend.make
@@ -75,212 +75,212 @@ src/CMakeFiles/kplus.dir/codegen:
 src/CMakeFiles/kplus.dir/kp_usb.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_usb.c.obj: E:/Kneron-AI-Project/src/kp_usb.c
 src/CMakeFiles/kplus.dir/kp_usb.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/kplus.dir/kp_usb.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_usb.c.obj -MF CMakeFiles/kplus.dir/kp_usb.c.obj.d -o CMakeFiles/kplus.dir/kp_usb.c.obj -c /E/Kneron-AI-Project/src/kp_usb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/kplus.dir/kp_usb.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_usb.c.obj -MF CMakeFiles/kplus.dir/kp_usb.c.obj.d -o CMakeFiles/kplus.dir/kp_usb.c.obj -c /E/Kneron-AI-Project/src/kp_usb.c
 
 src/CMakeFiles/kplus.dir/kp_usb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_usb.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_usb.c > CMakeFiles/kplus.dir/kp_usb.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_usb.c > CMakeFiles/kplus.dir/kp_usb.c.i
 
 src/CMakeFiles/kplus.dir/kp_usb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_usb.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_usb.c -o CMakeFiles/kplus.dir/kp_usb.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_usb.c -o CMakeFiles/kplus.dir/kp_usb.c.s
 
 src/CMakeFiles/kplus.dir/kp_core.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_core.c.obj: E:/Kneron-AI-Project/src/kp_core.c
 src/CMakeFiles/kplus.dir/kp_core.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/kplus.dir/kp_core.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_core.c.obj -MF CMakeFiles/kplus.dir/kp_core.c.obj.d -o CMakeFiles/kplus.dir/kp_core.c.obj -c /E/Kneron-AI-Project/src/kp_core.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/kplus.dir/kp_core.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_core.c.obj -MF CMakeFiles/kplus.dir/kp_core.c.obj.d -o CMakeFiles/kplus.dir/kp_core.c.obj -c /E/Kneron-AI-Project/src/kp_core.c
 
 src/CMakeFiles/kplus.dir/kp_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_core.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_core.c > CMakeFiles/kplus.dir/kp_core.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_core.c > CMakeFiles/kplus.dir/kp_core.c.i
 
 src/CMakeFiles/kplus.dir/kp_core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_core.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_core.c -o CMakeFiles/kplus.dir/kp_core.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_core.c -o CMakeFiles/kplus.dir/kp_core.c.s
 
 src/CMakeFiles/kplus.dir/kp_errstring.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_errstring.c.obj: E:/Kneron-AI-Project/src/kp_errstring.c
 src/CMakeFiles/kplus.dir/kp_errstring.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/kplus.dir/kp_errstring.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_errstring.c.obj -MF CMakeFiles/kplus.dir/kp_errstring.c.obj.d -o CMakeFiles/kplus.dir/kp_errstring.c.obj -c /E/Kneron-AI-Project/src/kp_errstring.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/kplus.dir/kp_errstring.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_errstring.c.obj -MF CMakeFiles/kplus.dir/kp_errstring.c.obj.d -o CMakeFiles/kplus.dir/kp_errstring.c.obj -c /E/Kneron-AI-Project/src/kp_errstring.c
 
 src/CMakeFiles/kplus.dir/kp_errstring.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_errstring.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_errstring.c > CMakeFiles/kplus.dir/kp_errstring.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_errstring.c > CMakeFiles/kplus.dir/kp_errstring.c.i
 
 src/CMakeFiles/kplus.dir/kp_errstring.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_errstring.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_errstring.c -o CMakeFiles/kplus.dir/kp_errstring.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_errstring.c -o CMakeFiles/kplus.dir/kp_errstring.c.s
 
 src/CMakeFiles/kplus.dir/kp_inference.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_inference.c.obj: E:/Kneron-AI-Project/src/kp_inference.c
 src/CMakeFiles/kplus.dir/kp_inference.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/kplus.dir/kp_inference.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_inference.c.obj -MF CMakeFiles/kplus.dir/kp_inference.c.obj.d -o CMakeFiles/kplus.dir/kp_inference.c.obj -c /E/Kneron-AI-Project/src/kp_inference.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/kplus.dir/kp_inference.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_inference.c.obj -MF CMakeFiles/kplus.dir/kp_inference.c.obj.d -o CMakeFiles/kplus.dir/kp_inference.c.obj -c /E/Kneron-AI-Project/src/kp_inference.c
 
 src/CMakeFiles/kplus.dir/kp_inference.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_inference.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_inference.c > CMakeFiles/kplus.dir/kp_inference.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_inference.c > CMakeFiles/kplus.dir/kp_inference.c.i
 
 src/CMakeFiles/kplus.dir/kp_inference.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_inference.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_inference.c -o CMakeFiles/kplus.dir/kp_inference.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_inference.c -o CMakeFiles/kplus.dir/kp_inference.c.s
 
 src/CMakeFiles/kplus.dir/kp_set_key.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_set_key.c.obj: E:/Kneron-AI-Project/src/kp_set_key.c
 src/CMakeFiles/kplus.dir/kp_set_key.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/CMakeFiles/kplus.dir/kp_set_key.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_set_key.c.obj -MF CMakeFiles/kplus.dir/kp_set_key.c.obj.d -o CMakeFiles/kplus.dir/kp_set_key.c.obj -c /E/Kneron-AI-Project/src/kp_set_key.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/CMakeFiles/kplus.dir/kp_set_key.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_set_key.c.obj -MF CMakeFiles/kplus.dir/kp_set_key.c.obj.d -o CMakeFiles/kplus.dir/kp_set_key.c.obj -c /E/Kneron-AI-Project/src/kp_set_key.c
 
 src/CMakeFiles/kplus.dir/kp_set_key.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_set_key.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_set_key.c > CMakeFiles/kplus.dir/kp_set_key.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_set_key.c > CMakeFiles/kplus.dir/kp_set_key.c.i
 
 src/CMakeFiles/kplus.dir/kp_set_key.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_set_key.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_set_key.c -o CMakeFiles/kplus.dir/kp_set_key.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_set_key.c -o CMakeFiles/kplus.dir/kp_set_key.c.s
 
 src/CMakeFiles/kplus.dir/kp_update_flash.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kp_update_flash.c.obj: E:/Kneron-AI-Project/src/kp_update_flash.c
 src/CMakeFiles/kplus.dir/kp_update_flash.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/CMakeFiles/kplus.dir/kp_update_flash.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_update_flash.c.obj -MF CMakeFiles/kplus.dir/kp_update_flash.c.obj.d -o CMakeFiles/kplus.dir/kp_update_flash.c.obj -c /E/Kneron-AI-Project/src/kp_update_flash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/CMakeFiles/kplus.dir/kp_update_flash.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kp_update_flash.c.obj -MF CMakeFiles/kplus.dir/kp_update_flash.c.obj.d -o CMakeFiles/kplus.dir/kp_update_flash.c.obj -c /E/Kneron-AI-Project/src/kp_update_flash.c
 
 src/CMakeFiles/kplus.dir/kp_update_flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kp_update_flash.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_update_flash.c > CMakeFiles/kplus.dir/kp_update_flash.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kp_update_flash.c > CMakeFiles/kplus.dir/kp_update_flash.c.i
 
 src/CMakeFiles/kplus.dir/kp_update_flash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kp_update_flash.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_update_flash.c -o CMakeFiles/kplus.dir/kp_update_flash.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kp_update_flash.c -o CMakeFiles/kplus.dir/kp_update_flash.c.s
 
 src/CMakeFiles/kplus.dir/nef_reader.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/nef_reader.c.obj: E:/Kneron-AI-Project/src/nef_reader.c
 src/CMakeFiles/kplus.dir/nef_reader.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/CMakeFiles/kplus.dir/nef_reader.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/nef_reader.c.obj -MF CMakeFiles/kplus.dir/nef_reader.c.obj.d -o CMakeFiles/kplus.dir/nef_reader.c.obj -c /E/Kneron-AI-Project/src/nef_reader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/CMakeFiles/kplus.dir/nef_reader.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/nef_reader.c.obj -MF CMakeFiles/kplus.dir/nef_reader.c.obj.d -o CMakeFiles/kplus.dir/nef_reader.c.obj -c /E/Kneron-AI-Project/src/nef_reader.c
 
 src/CMakeFiles/kplus.dir/nef_reader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/nef_reader.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/nef_reader.c > CMakeFiles/kplus.dir/nef_reader.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/nef_reader.c > CMakeFiles/kplus.dir/nef_reader.c.i
 
 src/CMakeFiles/kplus.dir/nef_reader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/nef_reader.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/nef_reader.c -o CMakeFiles/kplus.dir/nef_reader.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/nef_reader.c -o CMakeFiles/kplus.dir/nef_reader.c.s
 
 src/CMakeFiles/kplus.dir/kne_reader.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/kne_reader.c.obj: E:/Kneron-AI-Project/src/kne_reader.c
 src/CMakeFiles/kplus.dir/kne_reader.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/CMakeFiles/kplus.dir/kne_reader.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kne_reader.c.obj -MF CMakeFiles/kplus.dir/kne_reader.c.obj.d -o CMakeFiles/kplus.dir/kne_reader.c.obj -c /E/Kneron-AI-Project/src/kne_reader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/CMakeFiles/kplus.dir/kne_reader.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/kne_reader.c.obj -MF CMakeFiles/kplus.dir/kne_reader.c.obj.d -o CMakeFiles/kplus.dir/kne_reader.c.obj -c /E/Kneron-AI-Project/src/kne_reader.c
 
 src/CMakeFiles/kplus.dir/kne_reader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/kne_reader.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kne_reader.c > CMakeFiles/kplus.dir/kne_reader.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/kne_reader.c > CMakeFiles/kplus.dir/kne_reader.c.i
 
 src/CMakeFiles/kplus.dir/kne_reader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/kne_reader.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kne_reader.c -o CMakeFiles/kplus.dir/kne_reader.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/kne_reader.c -o CMakeFiles/kplus.dir/kne_reader.c.s
 
 src/CMakeFiles/kplus.dir/model_reader_utils.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/model_reader_utils.c.obj: E:/Kneron-AI-Project/src/model_reader_utils.c
 src/CMakeFiles/kplus.dir/model_reader_utils.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/CMakeFiles/kplus.dir/model_reader_utils.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_reader_utils.c.obj -MF CMakeFiles/kplus.dir/model_reader_utils.c.obj.d -o CMakeFiles/kplus.dir/model_reader_utils.c.obj -c /E/Kneron-AI-Project/src/model_reader_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/CMakeFiles/kplus.dir/model_reader_utils.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_reader_utils.c.obj -MF CMakeFiles/kplus.dir/model_reader_utils.c.obj.d -o CMakeFiles/kplus.dir/model_reader_utils.c.obj -c /E/Kneron-AI-Project/src/model_reader_utils.c
 
 src/CMakeFiles/kplus.dir/model_reader_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/model_reader_utils.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_reader_utils.c > CMakeFiles/kplus.dir/model_reader_utils.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_reader_utils.c > CMakeFiles/kplus.dir/model_reader_utils.c.i
 
 src/CMakeFiles/kplus.dir/model_reader_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/model_reader_utils.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_reader_utils.c -o CMakeFiles/kplus.dir/model_reader_utils.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_reader_utils.c -o CMakeFiles/kplus.dir/model_reader_utils.c.s
 
 src/CMakeFiles/kplus.dir/setup_reader.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/setup_reader.c.obj: E:/Kneron-AI-Project/src/setup_reader.c
 src/CMakeFiles/kplus.dir/setup_reader.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object src/CMakeFiles/kplus.dir/setup_reader.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/setup_reader.c.obj -MF CMakeFiles/kplus.dir/setup_reader.c.obj.d -o CMakeFiles/kplus.dir/setup_reader.c.obj -c /E/Kneron-AI-Project/src/setup_reader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object src/CMakeFiles/kplus.dir/setup_reader.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/setup_reader.c.obj -MF CMakeFiles/kplus.dir/setup_reader.c.obj.d -o CMakeFiles/kplus.dir/setup_reader.c.obj -c /E/Kneron-AI-Project/src/setup_reader.c
 
 src/CMakeFiles/kplus.dir/setup_reader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/setup_reader.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/setup_reader.c > CMakeFiles/kplus.dir/setup_reader.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/setup_reader.c > CMakeFiles/kplus.dir/setup_reader.c.i
 
 src/CMakeFiles/kplus.dir/setup_reader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/setup_reader.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/setup_reader.c -o CMakeFiles/kplus.dir/setup_reader.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/setup_reader.c -o CMakeFiles/kplus.dir/setup_reader.c.s
 
 src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj: E:/Kneron-AI-Project/src/model_descriptor_builder.c
 src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj -MF CMakeFiles/kplus.dir/model_descriptor_builder.c.obj.d -o CMakeFiles/kplus.dir/model_descriptor_builder.c.obj -c /E/Kneron-AI-Project/src/model_descriptor_builder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj -MF CMakeFiles/kplus.dir/model_descriptor_builder.c.obj.d -o CMakeFiles/kplus.dir/model_descriptor_builder.c.obj -c /E/Kneron-AI-Project/src/model_descriptor_builder.c
 
 src/CMakeFiles/kplus.dir/model_descriptor_builder.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/model_descriptor_builder.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_descriptor_builder.c > CMakeFiles/kplus.dir/model_descriptor_builder.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_descriptor_builder.c > CMakeFiles/kplus.dir/model_descriptor_builder.c.i
 
 src/CMakeFiles/kplus.dir/model_descriptor_builder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/model_descriptor_builder.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_descriptor_builder.c -o CMakeFiles/kplus.dir/model_descriptor_builder.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_descriptor_builder.c -o CMakeFiles/kplus.dir/model_descriptor_builder.c.s
 
 src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj: E:/Kneron-AI-Project/src/model_descriptor_copier.c
 src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj -MF CMakeFiles/kplus.dir/model_descriptor_copier.c.obj.d -o CMakeFiles/kplus.dir/model_descriptor_copier.c.obj -c /E/Kneron-AI-Project/src/model_descriptor_copier.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj -MF CMakeFiles/kplus.dir/model_descriptor_copier.c.obj.d -o CMakeFiles/kplus.dir/model_descriptor_copier.c.obj -c /E/Kneron-AI-Project/src/model_descriptor_copier.c
 
 src/CMakeFiles/kplus.dir/model_descriptor_copier.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/model_descriptor_copier.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_descriptor_copier.c > CMakeFiles/kplus.dir/model_descriptor_copier.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/model_descriptor_copier.c > CMakeFiles/kplus.dir/model_descriptor_copier.c.i
 
 src/CMakeFiles/kplus.dir/model_descriptor_copier.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/model_descriptor_copier.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_descriptor_copier.c -o CMakeFiles/kplus.dir/model_descriptor_copier.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/model_descriptor_copier.c -o CMakeFiles/kplus.dir/model_descriptor_copier.c.s
 
 src/CMakeFiles/kplus.dir/utils.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/utils.c.obj: E:/Kneron-AI-Project/src/utils.c
 src/CMakeFiles/kplus.dir/utils.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/CMakeFiles/kplus.dir/utils.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/utils.c.obj -MF CMakeFiles/kplus.dir/utils.c.obj.d -o CMakeFiles/kplus.dir/utils.c.obj -c /E/Kneron-AI-Project/src/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object src/CMakeFiles/kplus.dir/utils.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/utils.c.obj -MF CMakeFiles/kplus.dir/utils.c.obj.d -o CMakeFiles/kplus.dir/utils.c.obj -c /E/Kneron-AI-Project/src/utils.c
 
 src/CMakeFiles/kplus.dir/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/utils.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/utils.c > CMakeFiles/kplus.dir/utils.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/utils.c > CMakeFiles/kplus.dir/utils.c.i
 
 src/CMakeFiles/kplus.dir/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/utils.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/utils.c -o CMakeFiles/kplus.dir/utils.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/utils.c -o CMakeFiles/kplus.dir/utils.c.s
 
 src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj: E:/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c
 src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj -MF CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj.d -o CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj -c /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj -MF CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj.d -o CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj -c /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c
 
 src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c > CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c > CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i
 
 src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c -o CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/python_wrapper/src/kp_python_wrap.c -o CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s
 
 src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj: src/CMakeFiles/kplus.dir/flags.make
 src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj: E:/Kneron-AI-Project/src/legacy/kp_inference_v1.c
 src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj: src/CMakeFiles/kplus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj -MF CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj.d -o CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj -c /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj -MF CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj.d -o CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj -c /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c
 
 src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c > CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c > CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i
 
 src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c -o CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /E/Kneron-AI-Project/src/legacy/kp_inference_v1.c -o CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s
 
 # Object files for target kplus
 kplus_OBJECTS = \
@@ -320,22 +320,22 @@ bin/library/lib/libkplus.dll: src/CMakeFiles/kplus.dir/python_wrapper/src/kp_pyt
 bin/library/lib/libkplus.dll: src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj
 bin/library/lib/libkplus.dll: src/CMakeFiles/kplus.dir/build.make
 bin/library/lib/libkplus.dll: E:/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/E/kneron-ai-project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C shared library ../bin/library/lib/libkplus.dll"
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/kplus.dir/objects.a
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/ar.exe qc CMakeFiles/kplus.dir/objects.a $(kplus_OBJECTS) $(kplus_EXTERNAL_OBJECTS)
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cc.exe  -std=gnu99 -Werror -Wall -shared -o ../bin/library/lib/libkplus.dll -Wl,--out-implib,libkplus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles/kplus.dir/objects.a -Wl,--no-whole-archive  -lusb-1.0 -lws2_32 /E/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/kneron-ai-project/project/bin/library/lib/*kplus* E:/kneron-ai-project/project/bin
-	cd /E/kneron-ai-project/project/src && /E/msys64/mingw64/bin/cmake.exe -E copy_directory E:/Kneron-AI-Project/include E:/kneron-ai-project/project/bin/library/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/E/Kneron-AI-Project/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C shared library ../bin/library/lib/libkplus.dll"
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/kplus.dir/objects.a
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/ar.exe qc CMakeFiles/kplus.dir/objects.a $(kplus_OBJECTS) $(kplus_EXTERNAL_OBJECTS)
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cc.exe  -std=gnu99 -Werror -Wall -shared -o ../bin/library/lib/libkplus.dll -Wl,--out-implib,libkplus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles/kplus.dir/objects.a -Wl,--no-whole-archive  -lusb-1.0 -lws2_32 /E/Kneron-AI-Project/thirdparty/windows/dll/libwdi.dll -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/Kneron-AI-Project/project/bin/library/lib/*kplus* E:/Kneron-AI-Project/project/bin
+	cd /E/Kneron-AI-Project/project/src && /E/msys64/mingw64/bin/cmake.exe -E copy_directory E:/Kneron-AI-Project/include E:/Kneron-AI-Project/project/bin/library/include
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/kplus.dir/build: bin/library/lib/libkplus.dll
 .PHONY : src/CMakeFiles/kplus.dir/build
 
 src/CMakeFiles/kplus.dir/clean:
-	cd /E/kneron-ai-project/project/src && $(CMAKE_COMMAND) -P CMakeFiles/kplus.dir/cmake_clean.cmake
+	cd /E/Kneron-AI-Project/project/src && $(CMAKE_COMMAND) -P CMakeFiles/kplus.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/kplus.dir/clean
 
 src/CMakeFiles/kplus.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project/src /E/kneron-ai-project/project /E/kneron-ai-project/project/src /E/kneron-ai-project/project/src/CMakeFiles/kplus.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project/src /E/Kneron-AI-Project/project /E/Kneron-AI-Project/project/src /E/Kneron-AI-Project/project/src/CMakeFiles/kplus.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/kplus.dir/depend
 

@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "E:/kneron-ai-project/project/tools/DFUT/DFUT_console/install_local_manifest.txt"
+  file(WRITE "E:/Kneron-AI-Project/project/tools/DFUT/DFUT_console/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

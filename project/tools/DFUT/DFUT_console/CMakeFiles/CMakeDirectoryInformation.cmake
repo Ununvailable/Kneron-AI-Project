@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "E:/Kneron-AI-Project")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "E:/kneron-ai-project/project")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "E:/Kneron-AI-Project/project")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

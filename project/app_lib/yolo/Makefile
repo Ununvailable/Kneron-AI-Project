@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,21 +87,21 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/app_lib/yolo//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/app_lib/yolo//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/app_lib/yolo//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/app_lib/yolo//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
 clean:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/clean
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/clean
 .PHONY : clean
 
 # The main clean target
@@ -110,22 +110,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
 .PHONY : app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
 
 # Convenience name for target.
@@ -134,7 +134,7 @@ kapp_yolo: app_lib/yolo/CMakeFiles/kapp_yolo.dir/rule
 
 # fast build rule for target.
 kapp_yolo/fast:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/build
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/build
 .PHONY : kapp_yolo/fast
 
 __/utils/src/app_helper.obj: __/utils/src/app_helper.c.obj
@@ -142,7 +142,7 @@ __/utils/src/app_helper.obj: __/utils/src/app_helper.c.obj
 
 # target to build an object file
 __/utils/src/app_helper.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.obj
 .PHONY : __/utils/src/app_helper.c.obj
 
 __/utils/src/app_helper.i: __/utils/src/app_helper.c.i
@@ -150,7 +150,7 @@ __/utils/src/app_helper.i: __/utils/src/app_helper.c.i
 
 # target to preprocess a source file
 __/utils/src/app_helper.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.i
 .PHONY : __/utils/src/app_helper.c.i
 
 __/utils/src/app_helper.s: __/utils/src/app_helper.c.s
@@ -158,7 +158,7 @@ __/utils/src/app_helper.s: __/utils/src/app_helper.c.s
 
 # target to generate assembly for a file
 __/utils/src/app_helper.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/__/utils/src/app_helper.c.s
 .PHONY : __/utils/src/app_helper.c.s
 
 src/kp_app_yolo.obj: src/kp_app_yolo.c.obj
@@ -166,7 +166,7 @@ src/kp_app_yolo.obj: src/kp_app_yolo.c.obj
 
 # target to build an object file
 src/kp_app_yolo.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.obj
 .PHONY : src/kp_app_yolo.c.obj
 
 src/kp_app_yolo.i: src/kp_app_yolo.c.i
@@ -174,7 +174,7 @@ src/kp_app_yolo.i: src/kp_app_yolo.c.i
 
 # target to preprocess a source file
 src/kp_app_yolo.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.i
 .PHONY : src/kp_app_yolo.c.i
 
 src/kp_app_yolo.s: src/kp_app_yolo.c.s
@@ -182,7 +182,7 @@ src/kp_app_yolo.s: src/kp_app_yolo.c.s
 
 # target to generate assembly for a file
 src/kp_app_yolo.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f app_lib/yolo/CMakeFiles/kapp_yolo.dir/build.make app_lib/yolo/CMakeFiles/kapp_yolo.dir/src/kp_app_yolo.c.s
 .PHONY : src/kp_app_yolo.c.s
 
 # Help Target
@@ -212,6 +212,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

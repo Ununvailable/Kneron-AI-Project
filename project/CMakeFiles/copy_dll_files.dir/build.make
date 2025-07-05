@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 # Utility rule file for copy_dll_files.
 
@@ -67,8 +67,8 @@ include CMakeFiles/copy_dll_files.dir/compiler_depend.make
 include CMakeFiles/copy_dll_files.dir/progress.make
 
 CMakeFiles/copy_dll_files:
-	/E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/Kneron-AI-Project/thirdparty/windows/dll/* E:/kneron-ai-project/project/bin
-	/E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/msys64/mingw64/bin/libstdc++-6.dll E:/kneron-ai-project/project/bin
+	/E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/Kneron-AI-Project/thirdparty/windows/dll/* E:/Kneron-AI-Project/project/bin
+	/E/msys64/mingw64/bin/cmake.exe -E copy_if_different E:/msys64/mingw64/bin/libstdc++-6.dll E:/Kneron-AI-Project/project/bin
 
 CMakeFiles/copy_dll_files.dir/codegen:
 .PHONY : CMakeFiles/copy_dll_files.dir/codegen
@@ -86,6 +86,6 @@ CMakeFiles/copy_dll_files.dir/clean:
 .PHONY : CMakeFiles/copy_dll_files.dir/clean
 
 CMakeFiles/copy_dll_files.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project /E/kneron-ai-project/project /E/kneron-ai-project/project /E/kneron-ai-project/project/CMakeFiles/copy_dll_files.dir/DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MSYS Makefiles" /E/Kneron-AI-Project /E/Kneron-AI-Project /E/Kneron-AI-Project/project /E/Kneron-AI-Project/project /E/Kneron-AI-Project/project/CMakeFiles/copy_dll_files.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/copy_dll_files.dir/depend
 

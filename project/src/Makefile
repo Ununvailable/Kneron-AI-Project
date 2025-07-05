@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /E/Kneron-AI-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /E/kneron-ai-project/project
+CMAKE_BINARY_DIR = /E/Kneron-AI-Project/project
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,21 +87,21 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/src//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/src//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles /E/kneron-ai-project/project/src//CMakeFiles/progress.marks
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /E/kneron-ai-project/project/CMakeFiles 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles /E/Kneron-AI-Project/project/src//CMakeFiles/progress.marks
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/codegen
+	$(CMAKE_COMMAND) -E cmake_progress_start /E/Kneron-AI-Project/project/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
 clean:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -110,22 +110,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/kplus.dir/rule:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kplus.dir/rule
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kplus.dir/rule
 .PHONY : src/CMakeFiles/kplus.dir/rule
 
 # Convenience name for target.
@@ -134,7 +134,7 @@ kplus: src/CMakeFiles/kplus.dir/rule
 
 # fast build rule for target.
 kplus/fast:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/build
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/build
 .PHONY : kplus/fast
 
 kne_reader.obj: kne_reader.c.obj
@@ -142,7 +142,7 @@ kne_reader.obj: kne_reader.c.obj
 
 # target to build an object file
 kne_reader.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.obj
 .PHONY : kne_reader.c.obj
 
 kne_reader.i: kne_reader.c.i
@@ -150,7 +150,7 @@ kne_reader.i: kne_reader.c.i
 
 # target to preprocess a source file
 kne_reader.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.i
 .PHONY : kne_reader.c.i
 
 kne_reader.s: kne_reader.c.s
@@ -158,7 +158,7 @@ kne_reader.s: kne_reader.c.s
 
 # target to generate assembly for a file
 kne_reader.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kne_reader.c.s
 .PHONY : kne_reader.c.s
 
 kp_core.obj: kp_core.c.obj
@@ -166,7 +166,7 @@ kp_core.obj: kp_core.c.obj
 
 # target to build an object file
 kp_core.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.obj
 .PHONY : kp_core.c.obj
 
 kp_core.i: kp_core.c.i
@@ -174,7 +174,7 @@ kp_core.i: kp_core.c.i
 
 # target to preprocess a source file
 kp_core.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.i
 .PHONY : kp_core.c.i
 
 kp_core.s: kp_core.c.s
@@ -182,7 +182,7 @@ kp_core.s: kp_core.c.s
 
 # target to generate assembly for a file
 kp_core.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_core.c.s
 .PHONY : kp_core.c.s
 
 kp_errstring.obj: kp_errstring.c.obj
@@ -190,7 +190,7 @@ kp_errstring.obj: kp_errstring.c.obj
 
 # target to build an object file
 kp_errstring.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.obj
 .PHONY : kp_errstring.c.obj
 
 kp_errstring.i: kp_errstring.c.i
@@ -198,7 +198,7 @@ kp_errstring.i: kp_errstring.c.i
 
 # target to preprocess a source file
 kp_errstring.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.i
 .PHONY : kp_errstring.c.i
 
 kp_errstring.s: kp_errstring.c.s
@@ -206,7 +206,7 @@ kp_errstring.s: kp_errstring.c.s
 
 # target to generate assembly for a file
 kp_errstring.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_errstring.c.s
 .PHONY : kp_errstring.c.s
 
 kp_inference.obj: kp_inference.c.obj
@@ -214,7 +214,7 @@ kp_inference.obj: kp_inference.c.obj
 
 # target to build an object file
 kp_inference.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.obj
 .PHONY : kp_inference.c.obj
 
 kp_inference.i: kp_inference.c.i
@@ -222,7 +222,7 @@ kp_inference.i: kp_inference.c.i
 
 # target to preprocess a source file
 kp_inference.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.i
 .PHONY : kp_inference.c.i
 
 kp_inference.s: kp_inference.c.s
@@ -230,7 +230,7 @@ kp_inference.s: kp_inference.c.s
 
 # target to generate assembly for a file
 kp_inference.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_inference.c.s
 .PHONY : kp_inference.c.s
 
 kp_set_key.obj: kp_set_key.c.obj
@@ -238,7 +238,7 @@ kp_set_key.obj: kp_set_key.c.obj
 
 # target to build an object file
 kp_set_key.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.obj
 .PHONY : kp_set_key.c.obj
 
 kp_set_key.i: kp_set_key.c.i
@@ -246,7 +246,7 @@ kp_set_key.i: kp_set_key.c.i
 
 # target to preprocess a source file
 kp_set_key.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.i
 .PHONY : kp_set_key.c.i
 
 kp_set_key.s: kp_set_key.c.s
@@ -254,7 +254,7 @@ kp_set_key.s: kp_set_key.c.s
 
 # target to generate assembly for a file
 kp_set_key.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_set_key.c.s
 .PHONY : kp_set_key.c.s
 
 kp_update_flash.obj: kp_update_flash.c.obj
@@ -262,7 +262,7 @@ kp_update_flash.obj: kp_update_flash.c.obj
 
 # target to build an object file
 kp_update_flash.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.obj
 .PHONY : kp_update_flash.c.obj
 
 kp_update_flash.i: kp_update_flash.c.i
@@ -270,7 +270,7 @@ kp_update_flash.i: kp_update_flash.c.i
 
 # target to preprocess a source file
 kp_update_flash.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.i
 .PHONY : kp_update_flash.c.i
 
 kp_update_flash.s: kp_update_flash.c.s
@@ -278,7 +278,7 @@ kp_update_flash.s: kp_update_flash.c.s
 
 # target to generate assembly for a file
 kp_update_flash.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_update_flash.c.s
 .PHONY : kp_update_flash.c.s
 
 kp_usb.obj: kp_usb.c.obj
@@ -286,7 +286,7 @@ kp_usb.obj: kp_usb.c.obj
 
 # target to build an object file
 kp_usb.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.obj
 .PHONY : kp_usb.c.obj
 
 kp_usb.i: kp_usb.c.i
@@ -294,7 +294,7 @@ kp_usb.i: kp_usb.c.i
 
 # target to preprocess a source file
 kp_usb.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.i
 .PHONY : kp_usb.c.i
 
 kp_usb.s: kp_usb.c.s
@@ -302,7 +302,7 @@ kp_usb.s: kp_usb.c.s
 
 # target to generate assembly for a file
 kp_usb.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/kp_usb.c.s
 .PHONY : kp_usb.c.s
 
 legacy/kp_inference_v1.obj: legacy/kp_inference_v1.c.obj
@@ -310,7 +310,7 @@ legacy/kp_inference_v1.obj: legacy/kp_inference_v1.c.obj
 
 # target to build an object file
 legacy/kp_inference_v1.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.obj
 .PHONY : legacy/kp_inference_v1.c.obj
 
 legacy/kp_inference_v1.i: legacy/kp_inference_v1.c.i
@@ -318,7 +318,7 @@ legacy/kp_inference_v1.i: legacy/kp_inference_v1.c.i
 
 # target to preprocess a source file
 legacy/kp_inference_v1.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.i
 .PHONY : legacy/kp_inference_v1.c.i
 
 legacy/kp_inference_v1.s: legacy/kp_inference_v1.c.s
@@ -326,7 +326,7 @@ legacy/kp_inference_v1.s: legacy/kp_inference_v1.c.s
 
 # target to generate assembly for a file
 legacy/kp_inference_v1.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/legacy/kp_inference_v1.c.s
 .PHONY : legacy/kp_inference_v1.c.s
 
 model_descriptor_builder.obj: model_descriptor_builder.c.obj
@@ -334,7 +334,7 @@ model_descriptor_builder.obj: model_descriptor_builder.c.obj
 
 # target to build an object file
 model_descriptor_builder.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.obj
 .PHONY : model_descriptor_builder.c.obj
 
 model_descriptor_builder.i: model_descriptor_builder.c.i
@@ -342,7 +342,7 @@ model_descriptor_builder.i: model_descriptor_builder.c.i
 
 # target to preprocess a source file
 model_descriptor_builder.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.i
 .PHONY : model_descriptor_builder.c.i
 
 model_descriptor_builder.s: model_descriptor_builder.c.s
@@ -350,7 +350,7 @@ model_descriptor_builder.s: model_descriptor_builder.c.s
 
 # target to generate assembly for a file
 model_descriptor_builder.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_builder.c.s
 .PHONY : model_descriptor_builder.c.s
 
 model_descriptor_copier.obj: model_descriptor_copier.c.obj
@@ -358,7 +358,7 @@ model_descriptor_copier.obj: model_descriptor_copier.c.obj
 
 # target to build an object file
 model_descriptor_copier.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.obj
 .PHONY : model_descriptor_copier.c.obj
 
 model_descriptor_copier.i: model_descriptor_copier.c.i
@@ -366,7 +366,7 @@ model_descriptor_copier.i: model_descriptor_copier.c.i
 
 # target to preprocess a source file
 model_descriptor_copier.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.i
 .PHONY : model_descriptor_copier.c.i
 
 model_descriptor_copier.s: model_descriptor_copier.c.s
@@ -374,7 +374,7 @@ model_descriptor_copier.s: model_descriptor_copier.c.s
 
 # target to generate assembly for a file
 model_descriptor_copier.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_descriptor_copier.c.s
 .PHONY : model_descriptor_copier.c.s
 
 model_reader_utils.obj: model_reader_utils.c.obj
@@ -382,7 +382,7 @@ model_reader_utils.obj: model_reader_utils.c.obj
 
 # target to build an object file
 model_reader_utils.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.obj
 .PHONY : model_reader_utils.c.obj
 
 model_reader_utils.i: model_reader_utils.c.i
@@ -390,7 +390,7 @@ model_reader_utils.i: model_reader_utils.c.i
 
 # target to preprocess a source file
 model_reader_utils.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.i
 .PHONY : model_reader_utils.c.i
 
 model_reader_utils.s: model_reader_utils.c.s
@@ -398,7 +398,7 @@ model_reader_utils.s: model_reader_utils.c.s
 
 # target to generate assembly for a file
 model_reader_utils.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/model_reader_utils.c.s
 .PHONY : model_reader_utils.c.s
 
 nef_reader.obj: nef_reader.c.obj
@@ -406,7 +406,7 @@ nef_reader.obj: nef_reader.c.obj
 
 # target to build an object file
 nef_reader.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.obj
 .PHONY : nef_reader.c.obj
 
 nef_reader.i: nef_reader.c.i
@@ -414,7 +414,7 @@ nef_reader.i: nef_reader.c.i
 
 # target to preprocess a source file
 nef_reader.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.i
 .PHONY : nef_reader.c.i
 
 nef_reader.s: nef_reader.c.s
@@ -422,7 +422,7 @@ nef_reader.s: nef_reader.c.s
 
 # target to generate assembly for a file
 nef_reader.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/nef_reader.c.s
 .PHONY : nef_reader.c.s
 
 python_wrapper/src/kp_python_wrap.obj: python_wrapper/src/kp_python_wrap.c.obj
@@ -430,7 +430,7 @@ python_wrapper/src/kp_python_wrap.obj: python_wrapper/src/kp_python_wrap.c.obj
 
 # target to build an object file
 python_wrapper/src/kp_python_wrap.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.obj
 .PHONY : python_wrapper/src/kp_python_wrap.c.obj
 
 python_wrapper/src/kp_python_wrap.i: python_wrapper/src/kp_python_wrap.c.i
@@ -438,7 +438,7 @@ python_wrapper/src/kp_python_wrap.i: python_wrapper/src/kp_python_wrap.c.i
 
 # target to preprocess a source file
 python_wrapper/src/kp_python_wrap.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.i
 .PHONY : python_wrapper/src/kp_python_wrap.c.i
 
 python_wrapper/src/kp_python_wrap.s: python_wrapper/src/kp_python_wrap.c.s
@@ -446,7 +446,7 @@ python_wrapper/src/kp_python_wrap.s: python_wrapper/src/kp_python_wrap.c.s
 
 # target to generate assembly for a file
 python_wrapper/src/kp_python_wrap.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/python_wrapper/src/kp_python_wrap.c.s
 .PHONY : python_wrapper/src/kp_python_wrap.c.s
 
 setup_reader.obj: setup_reader.c.obj
@@ -454,7 +454,7 @@ setup_reader.obj: setup_reader.c.obj
 
 # target to build an object file
 setup_reader.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.obj
 .PHONY : setup_reader.c.obj
 
 setup_reader.i: setup_reader.c.i
@@ -462,7 +462,7 @@ setup_reader.i: setup_reader.c.i
 
 # target to preprocess a source file
 setup_reader.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.i
 .PHONY : setup_reader.c.i
 
 setup_reader.s: setup_reader.c.s
@@ -470,7 +470,7 @@ setup_reader.s: setup_reader.c.s
 
 # target to generate assembly for a file
 setup_reader.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/setup_reader.c.s
 .PHONY : setup_reader.c.s
 
 utils.obj: utils.c.obj
@@ -478,7 +478,7 @@ utils.obj: utils.c.obj
 
 # target to build an object file
 utils.c.obj:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.obj
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.obj
 .PHONY : utils.c.obj
 
 utils.i: utils.c.i
@@ -486,7 +486,7 @@ utils.i: utils.c.i
 
 # target to preprocess a source file
 utils.c.i:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.i
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.i
 .PHONY : utils.c.i
 
 utils.s: utils.c.s
@@ -494,7 +494,7 @@ utils.s: utils.c.s
 
 # target to generate assembly for a file
 utils.c.s:
-	cd /E/kneron-ai-project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.s
+	cd /E/Kneron-AI-Project/project && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kplus.dir/build.make src/CMakeFiles/kplus.dir/utils.c.s
 .PHONY : utils.c.s
 
 # Help Target
@@ -563,6 +563,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /E/kneron-ai-project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /E/Kneron-AI-Project/project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
