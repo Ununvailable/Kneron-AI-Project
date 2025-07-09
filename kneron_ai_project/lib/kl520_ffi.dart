@@ -17,4 +17,4 @@ final Kl520InitializeDart kl520Initialize = kl520Lib
 
 final Kl520RunInferenceDart kl520RunInference = kl520Lib
     .lookup<NativeFunction<Kl520RunInferenceC>>('kl520_run_inference')
-    .asFunction<Kl520RunInferenceDart>();
+    .asFunction<Kl520RunInferenceDart>(); 
