@@ -19,7 +19,7 @@ extern "C"
 #include "postprocess.h"
 }
 
-#include <opencv2/opencv.hpp>
+// #include <opencv2/opencv.hpp>
 #include <mutex>
 
 int main() {
