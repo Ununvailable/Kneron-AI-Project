@@ -18,11 +18,19 @@ samples, guidance on mobile development, and a full API reference.
 ## Architectural Overview
 
 [ Dart UI Layer ]
+
    ↓
+
 main.dart 
+
    ↓ (calls FFI functions)
+
 kl520_ffi.dart  
+
    ↓ (binds to native C++ functions)
+
 libkl520_ffi_lib.so 
+
    ↑ (built from kl520_android_application.cpp)
+
 [ Native C++ Library with KL520 logic ]
