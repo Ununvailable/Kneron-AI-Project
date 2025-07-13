@@ -30,7 +30,7 @@ add_library(
 # === External Library Link Example (Testing) ===
 
 # OpenCV
-# find_package(OpenCV REQUIRED)
+# find_package(OpenCV REQUIRED) 
 
 # Android Logging
 find_library(log-lib log)
