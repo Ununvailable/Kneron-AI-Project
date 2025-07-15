@@ -6,43 +6,40 @@ project(kl520_ffi_lib)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+# === Include Directories ===
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../include  # Kneron SDK include
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../ex_common # Common helper functions
-    # ${OpenCV_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../include        # Kneron SDK headers
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../src            # Kneron SDK sources
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/include/local      # SDK internal headers
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../ex_common      # Helper functions
 )
 
-# === Source Files ===
 file(GLOB LOCAL_SOURCES
-    "*.cpp"
-    "*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
 )
 
-# === Create Shared Library ===
+file(GLOB KNERON_SDK_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../src/*.c"
+)
+
+file(GLOB EX_COMMON_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../ex_common/*.c"
+)
+
 add_library(
     kl520_ffi_lib
     SHARED
     ${LOCAL_SOURCES}
+    ${KNERON_SDK_SOURCES}
+    ${EX_COMMON_SOURCES}
 )
 
-# === External Library Link Example (Testing) ===
-
-# OpenCV
-# find_package(OpenCV REQUIRED) 
-
-# Android Logging
 find_library(log-lib log)
 
-# KL520 SDK, pthread, and USB (optional; uncomment and configure as needed)
-# find_library(pthread-lib pthread)
-# find_library(usb-lib usb-1.0)
-
-# Consolidated link statement
 target_link_libraries(kl520_ffi_lib
-    # ${OpenCV_LIBS}
     ${log-lib}
-    # ${pthread-lib}
-    # ${usb-lib}
 )
+
