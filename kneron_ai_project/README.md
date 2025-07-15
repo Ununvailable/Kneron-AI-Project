@@ -32,14 +32,14 @@ As of now, this project consists of the following layers:
 
 ## Getting Started with Flutter
 
-If you are new to Flutter, the following resources will be useful:
+Reference used:
 - [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 - [Flutter API Reference and Documentation](https://docs.flutter.dev/)
 
 ---
 
-## Build and Integration Notes
+## Build and Integration Plan
 
 - The native library (`libkl520_ffi_lib.so`) must be built for Android using **CMake** with NDK.
 - Kneron SDK sources and `libusb` must be correctly included and linked in the build.
