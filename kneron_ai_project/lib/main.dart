@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image/image.dart' as img;
 import 'package:permission_handler/permission_handler.dart';
+import 'kl520_ffi.dart';
 
 void main() {
   runApp(const MaterialApp(home: ImageInspectorApp()));

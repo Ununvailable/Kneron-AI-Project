@@ -12,7 +12,8 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include        # Kneron SDK headers
     ${CMAKE_CURRENT_SOURCE_DIR}/../../src            # Kneron SDK sources
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/include/local      # SDK internal headers
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/include/local
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/include/soc_common
     ${CMAKE_CURRENT_SOURCE_DIR}/../../ex_common      # Helper functions
 )
 

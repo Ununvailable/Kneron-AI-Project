@@ -15,7 +15,8 @@
 #include "kp_struct.h"
 
 #include <pthread.h>
-#include <libusb-1.0/libusb.h>
+// #include <libusb-1.0/libusb.h>
+#include "kp_usb_jni_bridge.h"
 
 // kdp2 Low Level API
 

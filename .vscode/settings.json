@@ -4,6 +4,10 @@
         "mutex": "cpp",
         "list": "c",
         "internal_func.h": "c",
-        "kp_usb.h": "c"
+        "kp_usb.h": "c",
+        "kp_struct.h": "c",
+        "kl720_usb_minion.h": "c",
+        "string.h": "c",
+        "kp_usb_jni_bridge.h": "c"
     }
 }
