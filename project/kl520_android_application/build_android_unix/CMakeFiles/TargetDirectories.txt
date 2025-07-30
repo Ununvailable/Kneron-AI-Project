@@ -1,0 +1,3 @@
+F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles/kl520_ffi_lib.dir
+F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles/edit_cache.dir
+F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles/rebuild_cache.dir
