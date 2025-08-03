@@ -225,30 +225,6 @@ F_/Kneron-AI-Project/src/kp_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.s
 .PHONY : F_/Kneron-AI-Project/src/kp_core.c.s
 
-F_/Kneron-AI-Project/src/kp_core_wrapper.o: F_/Kneron-AI-Project/src/kp_core_wrapper.c.o
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.o
-
-# target to build an object file
-F_/Kneron-AI-Project/src/kp_core_wrapper.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core_wrapper.c.o
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.c.o
-
-F_/Kneron-AI-Project/src/kp_core_wrapper.i: F_/Kneron-AI-Project/src/kp_core_wrapper.c.i
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.i
-
-# target to preprocess a source file
-F_/Kneron-AI-Project/src/kp_core_wrapper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core_wrapper.c.i
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.c.i
-
-F_/Kneron-AI-Project/src/kp_core_wrapper.s: F_/Kneron-AI-Project/src/kp_core_wrapper.c.s
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.s
-
-# target to generate assembly for a file
-F_/Kneron-AI-Project/src/kp_core_wrapper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core_wrapper.c.s
-.PHONY : F_/Kneron-AI-Project/src/kp_core_wrapper.c.s
-
 F_/Kneron-AI-Project/src/kp_errstring.o: F_/Kneron-AI-Project/src/kp_errstring.c.o
 .PHONY : F_/Kneron-AI-Project/src/kp_errstring.o
 
@@ -368,6 +344,54 @@ F_/Kneron-AI-Project/src/kp_usb.s: F_/Kneron-AI-Project/src/kp_usb.c.s
 F_/Kneron-AI-Project/src/kp_usb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.s
 .PHONY : F_/Kneron-AI-Project/src/kp_usb.c.s
+
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.o: F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.o
+
+# target to build an object file
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o
+
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.i: F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.i
+
+# target to preprocess a source file
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i
+
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.s: F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.s
+
+# target to generate assembly for a file
+F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s
+
+F_/Kneron-AI-Project/src/kp_usb_transport.o: F_/Kneron-AI-Project/src/kp_usb_transport.c.o
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.o
+
+# target to build an object file
+F_/Kneron-AI-Project/src/kp_usb_transport.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.c.o
+
+F_/Kneron-AI-Project/src/kp_usb_transport.i: F_/Kneron-AI-Project/src/kp_usb_transport.c.i
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.i
+
+# target to preprocess a source file
+F_/Kneron-AI-Project/src/kp_usb_transport.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.i
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.c.i
+
+F_/Kneron-AI-Project/src/kp_usb_transport.s: F_/Kneron-AI-Project/src/kp_usb_transport.c.s
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.s
+
+# target to generate assembly for a file
+F_/Kneron-AI-Project/src/kp_usb_transport.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kl520_ffi_lib.dir/build.make CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.s
+.PHONY : F_/Kneron-AI-Project/src/kp_usb_transport.c.s
 
 F_/Kneron-AI-Project/src/model_descriptor_builder.o: F_/Kneron-AI-Project/src/model_descriptor_builder.c.o
 .PHONY : F_/Kneron-AI-Project/src/model_descriptor_builder.o
@@ -558,9 +582,6 @@ help:
 	@echo "... F_/Kneron-AI-Project/src/kp_core.o"
 	@echo "... F_/Kneron-AI-Project/src/kp_core.i"
 	@echo "... F_/Kneron-AI-Project/src/kp_core.s"
-	@echo "... F_/Kneron-AI-Project/src/kp_core_wrapper.o"
-	@echo "... F_/Kneron-AI-Project/src/kp_core_wrapper.i"
-	@echo "... F_/Kneron-AI-Project/src/kp_core_wrapper.s"
 	@echo "... F_/Kneron-AI-Project/src/kp_errstring.o"
 	@echo "... F_/Kneron-AI-Project/src/kp_errstring.i"
 	@echo "... F_/Kneron-AI-Project/src/kp_errstring.s"
@@ -576,6 +597,12 @@ help:
 	@echo "... F_/Kneron-AI-Project/src/kp_usb.o"
 	@echo "... F_/Kneron-AI-Project/src/kp_usb.i"
 	@echo "... F_/Kneron-AI-Project/src/kp_usb.s"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_jni_bridge.o"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_jni_bridge.i"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_jni_bridge.s"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_transport.o"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_transport.i"
+	@echo "... F_/Kneron-AI-Project/src/kp_usb_transport.s"
 	@echo "... F_/Kneron-AI-Project/src/model_descriptor_builder.o"
 	@echo "... F_/Kneron-AI-Project/src/model_descriptor_builder.i"
 	@echo "... F_/Kneron-AI-Project/src/model_descriptor_builder.s"

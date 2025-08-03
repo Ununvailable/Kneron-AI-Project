@@ -1,0 +1,85 @@
+(BARELY DONE)
+F:/Kneron-AI-Project/src/kp_usb.c:68:96: error: too many arguments to function call, expected 5, have 6
+   68 |                 status = usb_transport_bulk_out(usbdev, endpoint, cur_write_address, one_txfer, transferred, timeout);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~                                                              ^~~~~~~
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:78:5: note: 'usb_transport_bulk_out' declared here
+   78 | int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const void* data, int length, int timeout_ms);
+      |     ^                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+F:/Kneron-AI-Project/src/kp_usb.c:100:80: error: too many arguments to function call, expected 5, have 6
+  100 |                 status = usb_transport_bulk_out(usbdev, endpoint, zlp_buf, len, transferred, timeout);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~                                              ^~~~~~~
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:78:5: note: 'usb_transport_bulk_out' declared here
+   78 | int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const void* data, int length, int timeout_ms);
+      |     ^                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+F:/Kneron-AI-Project/src/kp_usb.c:139:52: error: incompatible integer to pointer conversion passing 'uintptr_t' (aka 'unsigned long') to parameter of type 'void *' [-Wint-conversion]
+  139 |                 status = usb_transport_bulk_in(usbdev, endpoint, cur_read_address, one_buf_size, transferred, timeout);
+      |                                                                  ^~~~~~~~~~~~~~~~
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:83:80: note: passing argument to parameter 'data' here
+   83 | int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms);
+      |                                                                                ^
+F:/Kneron-AI-Project/src/kp_usb.c:139:84: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'int *'; take the address with & [-Wint-conversion]
+  139 |                 status = usb_transport_bulk_in(usbdev, endpoint, cur_read_address, one_buf_size, transferred, timeout);
+      |                                                                                                  ^~~~~~~~~~~
+      |                                                                                                  &
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:83:103: note: passing argument to parameter 'transferred' here
+   83 | int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms);
+      |                                                                                                       ^
+F:/Kneron-AI-Project/src/kp_usb.c:160:52: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+  160 |                 status = usb_transport_bulk_in(usbdev, endpoint, zlp_buf, 4, transferred, 5);
+      |                                                                  ^~~~~~~
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:83:80: note: passing argument to parameter 'data' here
+   83 | int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms);
+      |                                                                                ^
+F:/Kneron-AI-Project/src/kp_usb.c:160:64: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'int *'; take the address with & [-Wint-conversion]
+  160 |                 status = usb_transport_bulk_in(usbdev, endpoint, zlp_buf, 4, transferred, 5);
+      |                                                                              ^~~~~~~~~~~
+      |                                                                              &
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:83:103: note: passing argument to parameter 'transferred' here
+   83 | int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms);
+      |                                                                                                       ^
+
+
+F:/Kneron-AI-Project/src/kp_usb.c:183:41: error: too few arguments to function call, expected 2, have 1
+  183 |                 if (0 != usb_transport_initialize(NULL))
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~     ^
+F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h:56:5: note: 'usb_transport_initialize' declared here
+   56 | int usb_transport_initialize(JNIEnv* env, jobject usb_host_bridge);
+      |     ^                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+F:/Kneron-AI-Project/src/kp_usb.c:207:11: error: call to undeclared function 'libusb_get_configuration'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  207 |         status = libusb_get_configuration(usbdev_handle, &config);
+      |                  ^
+F:/Kneron-AI-Project/src/kp_usb.c:216:12: error: call to undeclared function 'libusb_set_configuration'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  216 |                 status = libusb_set_configuration(usbdev_handle, 1);
+      |                          ^
+F:/Kneron-AI-Project/src/kp_usb.c:224:11: error: call to undeclared function 'libusb_claim_interface'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  224 |         status = libusb_claim_interface(usbdev_handle, 0);
+      |                  ^
+F:/Kneron-AI-Project/src/kp_usb.c:259:12: error: call to undeclared function 'libusb_interrupt_transfer'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  259 |                 status = libusb_interrupt_transfer(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
+      |                          ^
+F:/Kneron-AI-Project/src/kp_usb.c:308:47: error: use of undeclared identifier 'LIBUSB_REQUEST_TYPE_CLASS'
+  308 |         uint8_t bmRequestType = KP_USB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_CLASS | LIBUSB_RECIPIENT_INTERFACE;
+      |                                                      ^
+F:/Kneron-AI-Project/src/kp_usb.c:308:75: error: use of undeclared identifier 'LIBUSB_RECIPIENT_INTERFACE'
+  308 |         uint8_t bmRequestType = KP_USB_ENDPOINT_IN | LIBUSB_REQUEST_TYPE_CLASS | LIBUSB_RECIPIENT_INTERFACE;
+      |                                                                                  ^
+F:/Kneron-AI-Project/src/kp_usb.c:315:29: error: unknown type name 'libusb_device'
+  315 | static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_size)
+      |                             ^
+F:/Kneron-AI-Project/src/kp_usb.c:320:12: error: call to undeclared function 'libusb_open'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  320 |         int ret = libusb_open(dev, &usb_handle);
+      |                   ^
+F:/Kneron-AI-Project/src/kp_usb.c:328:3: error: call to undeclared function 'libusb_close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  328 |                 libusb_close(usb_handle);
+      |                 ^
+F:/Kneron-AI-Project/src/kp_usb.c:340:28: error: use of undeclared identifier 'LIBUSB_ENDPOINT_OUT'
+  340 |                         uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_CLASS | LIBUSB_RECIPIENT_INTERFACE;
+      |                                                 ^
+F:/Kneron-AI-Project/src/kp_usb.c:340:50: error: use of undeclared identifier 'LIBUSB_REQUEST_TYPE_CLASS'
+  340 |                         uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_CLASS | LIBUSB_RECIPIENT_INTERFACE;
+      |                                                                       ^
+F:/Kneron-AI-Project/src/kp_usb.c:340:78: error: use of undeclared identifier 'LIBUSB_RECIPIENT_INTERFACE'
+  340 |                         uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_CLASS | LIBUSB_RECIPIENT_INTERFACE;
+      |                                                                                                   ^

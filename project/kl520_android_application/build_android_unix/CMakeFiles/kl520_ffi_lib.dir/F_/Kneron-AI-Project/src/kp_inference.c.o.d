@@ -1,5 +1,5 @@
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
-  F:/Kneron-AI-Project/src/kp_core.c \
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_inference.c.o: \
+  F:/Kneron-AI-Project/src/kp_inference.c \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdio.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/cdefs.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/versioning.h \
@@ -90,23 +90,23 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/errno.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/errno.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/errno-base.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/time.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/math.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_inference.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_struct.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/pthread.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sched.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched/types.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/time.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_struct.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/time.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_update_flash.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_ipc_cmd.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_generic_raw.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_dbg.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/internal_func.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_version.h
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/model_type.h

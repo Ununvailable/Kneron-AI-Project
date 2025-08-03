@@ -17,12 +17,14 @@
 #include <pthread.h>
 // #include <libusb-1.0/libusb.h>
 #include "kp_usb_jni_bridge.h"
+#include "kp_usb_transport.h"
 
 // kdp2 Low Level API
 
 typedef struct
 {
-    libusb_device_handle *usb_handle;
+    // libusb_device_handle *usb_handle;
+    usb_device_handle_t* transport_handle;  // Use transport layer
     kp_device_descriptor_t dev_descp;
     pthread_mutex_t mutex_send;
     pthread_mutex_t mutex_recv;

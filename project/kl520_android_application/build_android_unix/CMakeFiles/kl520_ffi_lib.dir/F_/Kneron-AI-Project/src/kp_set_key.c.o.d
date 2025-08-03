@@ -1,11 +1,18 @@
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
-  F:/Kneron-AI-Project/src/kp_core.c \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdio.h \
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_set_key.c.o: \
+  F:/Kneron-AI-Project/src/kp_set_key.c \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/pthread.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/cdefs.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/versioning.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/api-level.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/get_device_api_level_inlines.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/ndk-version.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/limits.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/limits.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/float.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/limits.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/posix_limits.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/page_size.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/pthread_types.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/types.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stddef.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stddef_header_macro.h \
@@ -30,43 +37,19 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/compiler.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/posix_types.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/posix_types.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/pthread_types.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdarg.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_header_macro.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg___gnuc_va_list.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_list.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_arg.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg___va_copy.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_copy.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/seek_constants.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/struct_file.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/stdio.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdlib.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/alloca.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/wait.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/wait.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/malloc.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/xlocale.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/stdlib.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/legacy_stdlib_inlines.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/stdlib_inlines.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/string.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/strcasecmp.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/string.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/unistd.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/select.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/time.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sched.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/timespec.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched/types.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/time.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/time.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/time.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/time_types.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/select.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/signal.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/sigcontext.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/sve_context.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/signal_types.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/limits.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/limits.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/float.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/limits.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/posix_limits.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/signal.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/signal.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/signal.h \
@@ -75,7 +58,41 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/siginfo.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/ucontext.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/user.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/page_size.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/xlocale.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_set_key.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_struct.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdarg.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_header_macro.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg___gnuc_va_list.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_list.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_arg.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg___va_copy.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_copy.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_ipc_cmd.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_generic_raw.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdio.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/seek_constants.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/struct_file.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/stdio.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/stdlib.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/alloca.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/wait.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/wait.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/malloc.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/stdlib.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/android/legacy_stdlib_inlines.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/stdlib_inlines.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/string.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/strcasecmp.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fortify/string.h \
+  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/unistd.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/fcntl.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/getentropy.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/bits/getopt.h \
@@ -90,23 +107,4 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android/asm/errno.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/errno.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/asm-generic/errno-base.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/time.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/math.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/pthread.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sched.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched/types.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/time.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_struct.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
-  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_update_flash.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_ipc_cmd.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_generic_raw.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/internal_func.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_version.h
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/internal_func.h

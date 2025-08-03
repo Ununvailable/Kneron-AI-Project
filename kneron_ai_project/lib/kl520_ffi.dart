@@ -4,7 +4,7 @@ import 'package:ffi/ffi.dart';
 
 // Load shared library
 final DynamicLibrary kl520Lib = Platform.isAndroid
-    ? DynamicLibrary.open('libkl520_infer.so')
+    ? DynamicLibrary.open('libkl520_ffi_lib.so')
     : throw UnsupportedError('Only Android supported');
 
 // Typedefs and Lookups

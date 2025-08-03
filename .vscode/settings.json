@@ -9,6 +9,8 @@
         "kl720_usb_minion.h": "c",
         "string.h": "c",
         "kp_usb_jni_bridge.h": "c",
-        "jni.h": "c"
+        "jni.h": "c",
+        "kp_usb_transport.h": "c",
+        "stdint.h": "c"
     }
 }
