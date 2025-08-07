@@ -1,4 +1,4 @@
-#include "kp_usb_transport.h"
+#include "kp_usb_jni.h"
 #include <stdlib.h>
 #include <string.h>
 #include <android/log.h>

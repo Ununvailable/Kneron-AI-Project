@@ -16,7 +16,6 @@ class ImageInspectorApp extends StatefulWidget {
   State<ImageInspectorApp> createState() => _ImageInspectorAppState();
 }
 
-
 class _ImageInspectorAppState extends State<ImageInspectorApp> {
   final List<File> _selectedImages = [];
   final List<String> _info = [];

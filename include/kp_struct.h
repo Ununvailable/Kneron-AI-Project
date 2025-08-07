@@ -211,6 +211,55 @@ typedef enum
 } kp_usb_speed_t;
 
 /**
+ * @brief Remapped from libusb. Endpoint direction. 
+ * Values for bit 7 of the libusb_endpoint_descriptor::bEndpointAddress "endpoint address" scheme.
+ */
+enum libusb_endpoint_direction {
+	/** Out: host-to-device */
+	KP_USB_ENDPOINT_OUT = 0x00,
+
+	/** In: device-to-host */
+	KP_USB_ENDPOINT_IN = 0x80
+};
+
+/**
+ * @brief Remapped from libusb. 
+ * Request type bits of the libusb_control_setup::bmRequestType "bmRequestType" field in control
+ */
+enum kp_usb_request_type {
+	/** Standard */
+	KP_USB_REQUEST_TYPE_STANDARD = (0x00 << 5),
+
+	/** Class */
+	KP_USB_REQUEST_TYPE_CLASS = (0x01 << 5),
+
+	/** Vendor */
+	KP_USB_REQUEST_TYPE_VENDOR = (0x02 << 5),
+
+	/** Reserved */
+	KP_USB_REQUEST_TYPE_RESERVED = (0x03 << 5)
+};
+
+/**
+ * @brief Remapped from libusb. 
+ * Recipient bits of the libusb_control_setup::bmRequestType "bmRequestType" field in control transfers. 
+ * Values 4 through 31 are reserved.
+ */
+enum kp_usb_request_recipient {
+	/** Device */
+	KP_USB_RECIPIENT_DEVICE = 0x00,
+
+	/** Interface */
+	KP_USB_RECIPIENT_INTERFACE = 0x01,
+
+	/** Endpoint */
+	KP_USB_RECIPIENT_ENDPOINT = 0x02,
+
+	/** Other */
+	KP_USB_RECIPIENT_OTHER = 0x03
+};
+
+/**
  * @brief enum for USB PID(Product ID)
  */
 typedef enum
