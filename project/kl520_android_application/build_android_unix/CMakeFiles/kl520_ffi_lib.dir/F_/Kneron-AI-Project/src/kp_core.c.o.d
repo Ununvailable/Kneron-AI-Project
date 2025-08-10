@@ -100,9 +100,8 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_core.c.o: \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_struct.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_update_flash.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \

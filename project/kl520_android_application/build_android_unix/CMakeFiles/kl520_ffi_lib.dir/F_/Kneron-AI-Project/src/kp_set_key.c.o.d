@@ -64,7 +64,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_set_key.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdbool.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_internal.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/stdarg.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_header_macro.h \
@@ -73,7 +73,6 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_set_key.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_arg.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg___va_copy.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/20/include/__stdarg_va_copy.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_ipc_cmd.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_generic_raw.h \

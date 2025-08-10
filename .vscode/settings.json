@@ -13,6 +13,8 @@
         "kp_usb_transport.h": "c",
         "stdint.h": "c",
         "stdbool.h": "c",
-        "kp_core.h": "c"
-    }
+        "kp_core.h": "c",
+        "stdio.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/g++.exe"
 }

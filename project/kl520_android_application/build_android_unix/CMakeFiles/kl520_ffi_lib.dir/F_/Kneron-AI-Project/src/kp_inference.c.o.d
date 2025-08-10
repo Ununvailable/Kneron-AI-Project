@@ -100,9 +100,8 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_inference.c.o: \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/linux/sched/types.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/time.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/sys/time.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni_bridge.h \
+  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_jni.h \
   E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/jni.h \
-  F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/local/kp_usb_transport.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../include/kp_core.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_ipc_cmd.h \
   F:/Kneron-AI-Project/project/kl520_android_application/../../src/include/soc_common/kdp2_inf_generic_raw.h \

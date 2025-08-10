@@ -26,30 +26,30 @@ struct usb_device_handle {
 static JavaVM* g_jvm = NULL;
 static jobject g_usb_host_bridge = NULL;
 
-int usb_transport_initialize(JNIEnv* env, jobject usb_host_bridge) {
+int usb_jni_initialize(JNIEnv* env, jobject usb_host_bridge) {
     if (!env || !usb_host_bridge) {
-        LOGE("usb_transport_initialize: Invalid parameters");
+        LOGE("usb_jni_initialize: Invalid parameters");
         return -1;
     }
 
     // Store JavaVM reference
     if ((*env)->GetJavaVM(env, &g_jvm) != JNI_OK) {
-        LOGE("usb_transport_initialize: Failed to get JavaVM");
+        LOGE("usb_jni_initialize: Failed to get JavaVM");
         return -2;
     }
 
     // Store global reference to USB host bridge
     g_usb_host_bridge = (*env)->NewGlobalRef(env, usb_host_bridge);
     if (!g_usb_host_bridge) {
-        LOGE("usb_transport_initialize: Failed to create global reference");
+        LOGE("usb_jni_initialize: Failed to create global reference");
         return -3;
     }
 
-    LOGD("usb_transport_initialize: Successfully initialized USB transport");
+    LOGD("usb_jni_initialize: Successfully initialized USB jni");
     return 0;
 }
 
-int usb_transport_finalize(JNIEnv* env) {
+int usb_jni_finalize(JNIEnv* env) {
     if (!env) return -1;
 
     if (g_usb_host_bridge) {
@@ -58,26 +58,26 @@ int usb_transport_finalize(JNIEnv* env) {
     }
 
     g_jvm = NULL;
-    LOGD("usb_transport_finalize: Finalized USB transport");
+    LOGD("usb_jni_finalize: Finalized USB jni");
     return 0;
 }
 
-usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id) {
+usb_device_handle_t* usb_jni_open(uint16_t vendor_id, uint16_t product_id) {
     if (!g_jvm) {
-        LOGE("usb_transport_open: Transport not initialized");
+        LOGE("usb_jni_open: Transport not initialized");
         return NULL;
     }
 
     JNIEnv* env = NULL;
     if ((*g_jvm)->GetEnv(g_jvm, (void**)&env, JNI_VERSION_1_6) != JNI_OK) {
-        LOGE("usb_transport_open: Failed to get JNI environment");
+        LOGE("usb_jni_open: Failed to get JNI environment");
         return NULL;
     }
 
     // Allocate device handle
     usb_device_handle_t* handle = (usb_device_handle_t*)malloc(sizeof(usb_device_handle_t));
     if (!handle) {
-        LOGE("usb_transport_open: Failed to allocate memory");
+        LOGE("usb_jni_open: Failed to allocate memory");
         return NULL;
     }
 
@@ -90,7 +90,7 @@ usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id)
     // Get the UsbHostBridge class
     handle->bridge_class = (*env)->GetObjectClass(env, g_usb_host_bridge);
     if (!handle->bridge_class) {
-        LOGE("usb_transport_open: Failed to get UsbHostBridge class");
+        LOGE("usb_jni_open: Failed to get UsbHostBridge class");
         free(handle);
         return NULL;
     }
@@ -99,7 +99,7 @@ usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id)
     handle->bulk_out_method = (*env)->GetMethodID(env, handle->bridge_class,
         "bulkTransferOut", "(I[BII)I");
     if (!handle->bulk_out_method) {
-        LOGE("usb_transport_open: Failed to get bulkTransferOut method");
+        LOGE("usb_jni_open: Failed to get bulkTransferOut method");
         (*env)->DeleteLocalRef(env, handle->bridge_class);
         free(handle);
         return NULL;
@@ -108,7 +108,7 @@ usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id)
     handle->bulk_in_method = (*env)->GetMethodID(env, handle->bridge_class,
         "bulkTransferIn", "(I[BI[II)I");
     if (!handle->bulk_in_method) {
-        LOGE("usb_transport_open: Failed to get bulkTransferIn method");
+        LOGE("usb_jni_open: Failed to get bulkTransferIn method");
         (*env)->DeleteLocalRef(env, handle->bridge_class);
         free(handle);
         return NULL;
@@ -117,7 +117,7 @@ usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id)
     handle->control_method = (*env)->GetMethodID(env, handle->bridge_class,
         "controlTransfer", "(IIII[BII)I");
     if (!handle->control_method) {
-        LOGE("usb_transport_open: Failed to get controlTransfer method");
+        LOGE("usb_jni_open: Failed to get controlTransfer method");
         (*env)->DeleteLocalRef(env, handle->bridge_class);
         free(handle);
         return NULL;
@@ -127,14 +127,14 @@ usb_device_handle_t* usb_transport_open(uint16_t vendor_id, uint16_t product_id)
     handle->endpoint_bulk_in = 0x81;   // IN endpoint 1
     handle->endpoint_bulk_out = 0x01;  // OUT endpoint 1
 
-    LOGD("usb_transport_open: Successfully opened device VID:0x%04x PID:0x%04x", 
+    LOGD("usb_jni_open: Successfully opened device VID:0x%04x PID:0x%04x", 
          vendor_id, product_id);
     return handle;
 }
 
-int usb_transport_close(usb_device_handle_t* handle) {
+int usb_jni_close(usb_device_handle_t* handle) {
     if (!handle) {
-        LOGE("usb_transport_close: Invalid handle");
+        LOGE("usb_jni_close: Invalid handle");
         return -1;
     }
 
@@ -143,13 +143,13 @@ int usb_transport_close(usb_device_handle_t* handle) {
     }
 
     free(handle);
-    LOGD("usb_transport_close: Closed device handle");
+    LOGD("usb_jni_close: Closed device handle");
     return 0;
 }
 
-int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const void* data, int length, int* transferred, int timeout_ms) {
+int usb_jni_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const void* data, int length, int* transferred, int timeout_ms) {
     if (!handle || !data || length <= 0) {
-        LOGE("usb_transport_bulk_out: Invalid parameters");
+        LOGE("usb_jni_bulk_out: Invalid parameters");
         return -1;
     }
 
@@ -158,13 +158,13 @@ int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const 
     // Create byte array and copy data
     jbyteArray byte_array = (*env)->NewByteArray(env, length);
     if (!byte_array) {
-        LOGE("usb_transport_bulk_out: Failed to create byte array");
+        LOGE("usb_jni_bulk_out: Failed to create byte array");
         return -2;
     }
 
     (*env)->SetByteArrayRegion(env, byte_array, 0, length, (const jbyte*)data);
     if ((*env)->ExceptionCheck(env)) {
-        LOGE("usb_transport_bulk_out: Failed to set byte array data");
+        LOGE("usb_jni_bulk_out: Failed to set byte array data");
         (*env)->ExceptionClear(env);
         (*env)->DeleteLocalRef(env, byte_array);
         return -3;
@@ -179,7 +179,7 @@ int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const 
     (*env)->DeleteLocalRef(env, byte_array);
 
     if ((*env)->ExceptionCheck(env)) {
-        LOGE("usb_transport_bulk_out: Exception during bulk transfer");
+        LOGE("usb_jni_bulk_out: Exception during bulk transfer");
         (*env)->ExceptionDescribe(env);
         (*env)->ExceptionClear(env);
         return -4;
@@ -188,9 +188,9 @@ int usb_transport_bulk_out(usb_device_handle_t* handle, uint8_t endpoint, const 
     return (int)result;
 }
 
-int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms) {
+int usb_jni_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, int length, int* transferred, int timeout_ms) {
     if (!handle || !data || length <= 0 || !transferred) {
-        LOGE("usb_transport_bulk_in: Invalid parameters");
+        LOGE("usb_jni_bulk_in: Invalid parameters");
         return -1;
     }
 
@@ -199,14 +199,14 @@ int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* d
     // Create byte array for receiving data
     jbyteArray byte_array = (*env)->NewByteArray(env, length);
     if (!byte_array) {
-        LOGE("usb_transport_bulk_in: Failed to create byte array");
+        LOGE("usb_jni_bulk_in: Failed to create byte array");
         return -2;
     }
 
     // Create int array for transferred count
     jintArray transferred_array = (*env)->NewIntArray(env, 1);
     if (!transferred_array) {
-        LOGE("usb_transport_bulk_in: Failed to create transferred array");
+        LOGE("usb_jni_bulk_in: Failed to create transferred array");
         (*env)->DeleteLocalRef(env, byte_array);
         return -3;
     }
@@ -219,7 +219,7 @@ int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* d
                                        (jint)timeout_ms);
 
     if ((*env)->ExceptionCheck(env)) {
-        LOGE("usb_transport_bulk_in: Exception during bulk transfer");
+        LOGE("usb_jni_bulk_in: Exception during bulk transfer");
         (*env)->ExceptionDescribe(env);
         (*env)->ExceptionClear(env);
         (*env)->DeleteLocalRef(env, byte_array);
@@ -236,7 +236,7 @@ int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* d
     if (transferred_count > 0) {
         (*env)->GetByteArrayRegion(env, byte_array, 0, transferred_count, (jbyte*)data);
         if ((*env)->ExceptionCheck(env)) {
-            LOGE("usb_transport_bulk_in: Failed to get byte array data");
+            LOGE("usb_jni_bulk_in: Failed to get byte array data");
             (*env)->ExceptionClear(env);
             (*env)->DeleteLocalRef(env, byte_array);
             (*env)->DeleteLocalRef(env, transferred_array);
@@ -250,11 +250,11 @@ int usb_transport_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* d
     return (result >= 0) ? 0 : (int)result;
 }
 
-int usb_transport_control_transfer(usb_device_handle_t* handle, uint8_t request_type,
+int usb_jni_control_transfer(usb_device_handle_t* handle, uint8_t request_type,
                                   uint8_t request, uint16_t value, uint16_t index,
                                   void* data, uint16_t length, int timeout_ms) {
     if (!handle) {
-        LOGE("usb_transport_control_transfer: Invalid handle");
+        LOGE("usb_jni_control_transfer: Invalid handle");
         return -1;
     }
 
@@ -265,7 +265,7 @@ int usb_transport_control_transfer(usb_device_handle_t* handle, uint8_t request_
     if (data && length > 0) {
         byte_array = (*env)->NewByteArray(env, length);
         if (!byte_array) {
-            LOGE("usb_transport_control_transfer: Failed to create byte array");
+            LOGE("usb_jni_control_transfer: Failed to create byte array");
             return -2;
         }
 
@@ -273,7 +273,7 @@ int usb_transport_control_transfer(usb_device_handle_t* handle, uint8_t request_
         if ((request_type & 0x80) == 0) {  // Direction: Host to Device
             (*env)->SetByteArrayRegion(env, byte_array, 0, length, (const jbyte*)data);
             if ((*env)->ExceptionCheck(env)) {
-                LOGE("usb_transport_control_transfer: Failed to set byte array data");
+                LOGE("usb_jni_control_transfer: Failed to set byte array data");
                 (*env)->ExceptionClear(env);
                 (*env)->DeleteLocalRef(env, byte_array);
                 return -3;
@@ -290,7 +290,7 @@ int usb_transport_control_transfer(usb_device_handle_t* handle, uint8_t request_
                                        (jint)timeout_ms);
 
     if ((*env)->ExceptionCheck(env)) {
-        LOGE("usb_transport_control_transfer: Exception during control transfer");
+        LOGE("usb_jni_control_transfer: Exception during control transfer");
         (*env)->ExceptionDescribe(env);
         (*env)->ExceptionClear(env);
         if (byte_array) (*env)->DeleteLocalRef(env, byte_array);
@@ -301,7 +301,7 @@ int usb_transport_control_transfer(usb_device_handle_t* handle, uint8_t request_
     if (data && length > 0 && (request_type & 0x80) != 0 && result > 0) {
         (*env)->GetByteArrayRegion(env, byte_array, 0, result, (jbyte*)data);
         if ((*env)->ExceptionCheck(env)) {
-            LOGE("usb_transport_control_transfer: Failed to get byte array data");
+            LOGE("usb_jni_control_transfer: Failed to get byte array data");
             (*env)->ExceptionClear(env);
             if (byte_array) (*env)->DeleteLocalRef(env, byte_array);
             return -5;

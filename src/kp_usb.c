@@ -45,9 +45,10 @@ static int __kn_usb_bulk_out(kp_usb_device_t *dev, unsigned char endpoint, void 
 	int one_txfer = 0;
 	uintptr_t cur_write_address = (uintptr_t)buf;
 
-	libusb_device_handle *usbdev = dev->usb_handle;
+	// libusb_device_handle *usbdev = dev->usb_handle;
+	usb_device_handle_t *usbdev = dev->usb_handle;
 	int speed = dev->dev_descp.link_speed;
-	int max_psize = (speed <= LIBUSB_SPEED_HIGH) ? 512 : 1024;
+	int max_psize = (speed <= KP_USB_SPEED_HIGH) ? 512 : 1024;
 	int max_txfer_size = MAX_TXFER_SIZE;
 
 	//[KL730 HAPS]
@@ -65,7 +66,7 @@ static int __kn_usb_bulk_out(kp_usb_device_t *dev, unsigned char endpoint, void 
 		else
 			one_txfer = total_txfer;
 
-		status = libusb_bulk_transfer(usbdev, endpoint, (unsigned char *)cur_write_address, one_txfer, &transferred, timeout);
+		status = usb_jni_bulk_out(usbdev, endpoint, (unsigned char *)cur_write_address, one_txfer, &transferred, timeout);
 
 		if (status != 0)
 			return status;
@@ -97,7 +98,7 @@ static int __kn_usb_bulk_out(kp_usb_device_t *dev, unsigned char endpoint, void 
 			len = 4;
 		}
 
-		status = libusb_bulk_transfer(usbdev, endpoint, (unsigned char *)&zlp_buf, len, &transferred, timeout);
+		status = usb_jni_bulk_out(usbdev, endpoint, (unsigned char *)&zlp_buf, len, &transferred, timeout);
 
 		if (status != 0 || transferred != len)
 		{
@@ -111,7 +112,8 @@ static int __kn_usb_bulk_out(kp_usb_device_t *dev, unsigned char endpoint, void 
 
 static int __kn_usb_bulk_in(kp_usb_device_t *dev, unsigned char endpoint, void *buf, int buf_size, int *recv_size, unsigned int timeout)
 {
-	libusb_device_handle *usbdev = dev->usb_handle;
+	// libusb_device_handle *usbdev = dev->usb_handle;
+	usb_device_handle_t *usbdev = dev->usb_handle;
 
 	int status;
 	int transferred;
@@ -136,7 +138,7 @@ static int __kn_usb_bulk_in(kp_usb_device_t *dev, unsigned char endpoint, void *
 		int one_buf_size = MIN(_buf_size, max_txfer_size);
 		_buf_size -= one_buf_size;
 
-		status = libusb_bulk_transfer(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
+		status = usb_jni_bulk_in(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
 
 		if (status != 0)
 		{
@@ -157,7 +159,7 @@ static int __kn_usb_bulk_in(kp_usb_device_t *dev, unsigned char endpoint, void *
 	{
 		int zlp_buf;
 
-		status = libusb_bulk_transfer(usbdev, endpoint, (unsigned char *)&zlp_buf, 4, &transferred, 5);
+		status = usb_jni_bulk_in(usbdev, endpoint, (unsigned char *)&zlp_buf, 4, &transferred, 5);
 
 		if (status != 0)
 		{
@@ -199,7 +201,7 @@ static void __decrease_usb_refcnt()
 	pthread_mutex_unlock(&_g_mutex);
 }
 
-static int __kn_configure_usb_device(libusb_device_handle *usbdev_handle)
+static int __kn_configure_usb_device(kp_usb_device_t *usbdev_handle)
 {
 	int status;
 	int config;
@@ -233,7 +235,8 @@ static int __kn_configure_usb_device(libusb_device_handle *usbdev_handle)
 
 static int __kn_usb_interrupt_in(kp_usb_device_t *dev, unsigned char endpoint, void *buf, int buf_size, int *recv_size, unsigned int timeout)
 {
-	libusb_device_handle *usbdev = dev->usb_handle;
+	// libusb_device_handle *usbdev = dev->usb_handle;
+	usb_device_handle_t *usbdev = dev->usb_handle;
 
 	int status;
 	int transferred;
@@ -307,7 +310,7 @@ static int usb_dfu_get_status(libusb_device_handle *usb_handle)
 	unsigned char data[0x10];
 	uint8_t bmRequestType = KP_USB_ENDPOINT_IN | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
 	uint8_t bRequest = DFU_GETSTATUS;
-	int ret = libusb_control_transfer(usb_handle, bmRequestType, bRequest, 0, 0, data, (uint16_t)length, 1000);
+	int ret = usb_jni_control_transfer(usb_handle, bmRequestType, bRequest, 0, 0, data, (uint16_t)length, 1000);
 
 	return (0 < ret) ? data[4] : ret;
 }
@@ -316,7 +319,8 @@ static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_si
 {
 	dbg_print("starting loading file ...\n");
 
-	libusb_device_handle *usb_handle;
+	// libusb_device_handle *usb_handle;
+	usb_device_handle_t *usb_handle;
 	int ret = libusb_open(dev, &usb_handle);
 
 	if (0 != ret) {
@@ -339,7 +343,7 @@ static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_si
 		{
 			uint8_t bmRequestType = KP_USB_ENDPOINT_OUT | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
 			long txfer_size = (buf_size > 2048) ? 2048 : buf_size;
-			libusb_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, p_buf + (cnt * 2048), (uint16_t)txfer_size, 1000);
+			usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, p_buf + (cnt * 2048), (uint16_t)txfer_size, 1000);
 			buf_size -= txfer_size;
 			cnt++;
 		}
@@ -353,7 +357,7 @@ static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_si
 	if (dfu_status != DFU_STATE_dfuERROR)
 	{
 		uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_STANDARD | LIBUSB_REQUEST_TYPE_CLASS;
-		libusb_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, NULL, 0, 1000);
+		usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, NULL, 0, 1000);
 	}
 	else //if(dfu_status==DFU_STATE_dfuERROR)
 	{
@@ -587,7 +591,7 @@ kp_devices_list_t *kp_usb_scan_devices()
 	// this is a workaround for Faraday DFU status and for KN_NUMBER
 	// special process for USB DFU devices (KL720)
 	// if found, minion FW will be downloaded
-	usb_dfu_scan_download();
+	// usb_dfu_scan_download();
 
 	pthread_mutex_lock(&_g_mutex);
 	cnt = libusb_get_device_list(NULL, &devs_list);
@@ -660,7 +664,8 @@ kp_devices_list_t *kp_usb_scan_devices()
 
 			kdev_list->device[sidx].kn_number = 0x0;
 
-			libusb_device_handle *dev_handle = 0;
+			// libusb_device_handle *dev_handle = 0;
+			usb_device_handle_t *dev_handle = 0;
 			int sts = libusb_open(dev, &dev_handle);
 			if (sts == 0)
 			{
@@ -745,7 +750,7 @@ int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device
 	// this is a workaround for Faraday DFU status and for KN_NUMBER
 	// special process for USB DFU devices (KL720)
 	// if found, minion FW will be downloaded
-	usb_dfu_scan_download();
+	// usb_dfu_scan_download();
 
 	for (int i = 0; i < num_dev; i++)
 		output_devs[i] = NULL;
@@ -824,7 +829,8 @@ int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device
 			// try connect stage
 			for (int i = 0; i < num_dev; ++i)
 			{
-				libusb_device_handle *usbdev_handle = 0;
+				// libusb_device_handle *usbdev_handle = 0;
+				usb_device_handle_t *usbdev_handle = 0;
 				int sts = libusb_open(wanted_usbdev[i], &usbdev_handle);
 				if (sts != 0)
 					break;
@@ -867,7 +873,8 @@ int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device
 			break;
 		}
 
-		libusb_device_handle *usbdev_handle = 0;
+		// libusb_device_handle *usbdev_handle = 0;
+		usb_device_handle_t *usbdev_handle = 0;
 
 		int sts = libusb_get_device_descriptor(wanted_usbdev[i], &desc);
 		if (sts != 0)
@@ -944,33 +951,34 @@ int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device
 	return ret_code;
 }
 
-int kp_usb_disconnect_device(kp_usb_device_t *dev)
-{
-	libusb_device_handle *usbdev = dev->usb_handle;
-	libusb_close(usbdev);
-	__decrease_usb_refcnt();
+// int kp_usb_disconnect_device(kp_usb_device_t *dev)
+// {
+// 	// libusb_device_handle *usbdev = dev->usb_handle;
+// 	usb_device_handle_t *usbdev = dev->usb_handle;
+// 	libusb_close(usbdev);
+// 	__decrease_usb_refcnt();
 
-	pthread_mutex_destroy(&dev->mutex_send);
-	pthread_mutex_destroy(&dev->mutex_recv);
+// 	pthread_mutex_destroy(&dev->mutex_send);
+// 	pthread_mutex_destroy(&dev->mutex_recv);
 
-	free(dev);
+// 	free(dev);
 
-	return KP_USB_RET_OK;
-}
+// 	return KP_USB_RET_OK;
+// }
 
-int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[])
-{
-	for (int i = 0; i < num_dev; i++)
-	{
-		if (devs[i] != NULL)
-		{
-			kp_usb_disconnect_device(devs[i]);
-			devs[i] = NULL;
-		}
-	}
+// int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[])
+// {
+// 	for (int i = 0; i < num_dev; i++)
+// 	{
+// 		if (devs[i] != NULL)
+// 		{
+// 			kp_usb_disconnect_device(devs[i]);
+// 			devs[i] = NULL;
+// 		}
+// 	}
 
-	return KP_USB_RET_OK;
-}
+// 	return KP_USB_RET_OK;
+// }
 
 kp_device_descriptor_t *kp_usb_get_device_descriptor(kp_usb_device_t *dev)
 {
@@ -1062,7 +1070,7 @@ int kp_usb_control(kp_usb_device_t *dev, kp_usb_control_t *control_request, int 
 	unsigned char *data = NULL;
 	uint16_t wLength = 0;
 
-	int ret = libusb_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
+	int ret = usb_jni_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
 
 	return ret;
 }

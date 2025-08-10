@@ -16,15 +16,15 @@
 
 #include <pthread.h>
 // #include <libusb-1.0/libusb.h>
-#include "kp_usb_jni_bridge.h"
-#include "kp_usb_transport.h"
+#include <kp_usb_jni.h>
+
 
 // kdp2 Low Level API
 
 typedef struct
 {
     // libusb_device_handle *usb_handle;
-    usb_device_handle_t* transport_handle;  // Use transport layer
+    usb_device_handle_t *usb_handle;
     kp_device_descriptor_t dev_descp;
     pthread_mutex_t mutex_send;
     pthread_mutex_t mutex_recv;
@@ -70,8 +70,8 @@ kp_devices_list_t *kp_usb_scan_devices();
 int kp_usb_connect_multiple_devices_v2(int num_open, int port_id[], kp_usb_device_t *output_devs[], int try_count);
 
 // disconnect device
-int kp_usb_disconnect_device(kp_usb_device_t *dev);
-int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[]);
+// int kp_usb_disconnect_device(kp_usb_device_t *dev);
+// int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[]);
 
 kp_device_descriptor_t *kp_usb_get_device_descriptor(kp_usb_device_t *dev);
 

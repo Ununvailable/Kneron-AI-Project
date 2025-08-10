@@ -184,38 +184,24 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.s"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:/Kneron-AI-Project/src/kp_usb.c -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.s
 
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o: F:/Kneron-AI-Project/src/kp_usb_jni_bridge.c
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o -c F:/Kneron-AI-Project/src/kp_usb_jni_bridge.c
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o: F:/Kneron-AI-Project/src/kp_usb_jni.c
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o"
+	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o -c F:/Kneron-AI-Project/src/kp_usb_jni.c
 
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:/Kneron-AI-Project/src/kp_usb_jni_bridge.c > CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.i
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.i"
+	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:/Kneron-AI-Project/src/kp_usb_jni.c > CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.i
 
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:/Kneron-AI-Project/src/kp_usb_jni_bridge.c -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.s
-
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o: F:/Kneron-AI-Project/src/kp_usb_transport.c
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o -c F:/Kneron-AI-Project/src/kp_usb_transport.c
-
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.i"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:/Kneron-AI-Project/src/kp_usb_transport.c > CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.i
-
-CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.s"
-	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:/Kneron-AI-Project/src/kp_usb_transport.c -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.s
+CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.s"
+	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:/Kneron-AI-Project/src/kp_usb_jni.c -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.s
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o: F:/Kneron-AI-Project/src/model_descriptor_builder.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o -c F:/Kneron-AI-Project/src/model_descriptor_builder.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.i: cmake_force
@@ -229,7 +215,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o: F:/Kneron-AI-Project/src/model_descriptor_copier.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o -c F:/Kneron-AI-Project/src/model_descriptor_copier.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.i: cmake_force
@@ -243,7 +229,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o: F:/Kneron-AI-Project/src/model_reader_utils.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o -c F:/Kneron-AI-Project/src/model_reader_utils.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.i: cmake_force
@@ -257,7 +243,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.s: cm
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o: F:/Kneron-AI-Project/src/nef_reader.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.o -c F:/Kneron-AI-Project/src/nef_reader.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.i: cmake_force
@@ -271,7 +257,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/nef_reader.c.s: cmake_forc
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o: F:/Kneron-AI-Project/src/setup_reader.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.o -c F:/Kneron-AI-Project/src/setup_reader.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.i: cmake_force
@@ -285,7 +271,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/setup_reader.c.s: cmake_fo
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o: F:/Kneron-AI-Project/src/utils.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.o -c F:/Kneron-AI-Project/src/utils.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.i: cmake_force
@@ -299,7 +285,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/utils.c.s: cmake_force
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o: F:/Kneron-AI-Project/ex_common/helper_functions.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.o -c F:/Kneron-AI-Project/ex_common/helper_functions.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.i: cmake_force
@@ -313,7 +299,7 @@ CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/helper_functions.c.s
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o: CMakeFiles/kl520_ffi_lib.dir/flags.make
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o: F:/Kneron-AI-Project/ex_common/postprocess.c
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o -MF CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o.d -o CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.o -c F:/Kneron-AI-Project/ex_common/postprocess.c
 
 CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common/postprocess.c.i: cmake_force
@@ -334,8 +320,7 @@ kl520_ffi_lib_OBJECTS = \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_set_key.c.o" \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_update_flash.c.o" \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.o" \
-"CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o" \
-"CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o" \
+"CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o" \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o" \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o" \
 "CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o" \
@@ -356,8 +341,7 @@ libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_in
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_set_key.c.o
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_update_flash.c.o
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb.c.o
-libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni_bridge.c.o
-libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_transport.c.o
+libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/kp_usb_jni.c.o
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_builder.c.o
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_descriptor_copier.c.o
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/src/model_reader_utils.c.o
@@ -369,7 +353,7 @@ libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/F_/Kneron-AI-Project/ex_common
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/build.make
 libkl520_ffi_lib.so: CMakeFiles/kl520_ffi_lib.dir/compiler_depend.ts
 libkl520_ffi_lib.so: E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX shared library libkl520_ffi_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:/Kneron-AI-Project/project/kl520_android_application/build_android_unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library libkl520_ffi_lib.so"
 	E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe --target=aarch64-none-linux-android21 --sysroot=E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -DNDEBUG  -Xlinker --dependency-file=CMakeFiles/kl520_ffi_lib.dir/link.d -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,--gc-sections  -shared -Wl,-soname,libkl520_ffi_lib.so -o libkl520_ffi_lib.so $(kl520_ffi_lib_OBJECTS) $(kl520_ffi_lib_EXTERNAL_OBJECTS)  E:/Android/Sdk/ndk/29.0.13599879/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so -latomic -lm
 
 # Rule to build all files generated by this target.
