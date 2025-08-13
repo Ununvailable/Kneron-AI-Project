@@ -259,7 +259,7 @@ static int __kn_usb_interrupt_in(kp_usb_device_t *dev, unsigned char endpoint, v
 		int one_buf_size = MIN(_buf_size, max_txfer_size);
 		_buf_size -= one_buf_size;
 
-		status = libusb_interrupt_transfer(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
+		status = usb_jni_interrupt_transfer_in(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
 
 		if (status != 0)
 		{

@@ -250,6 +250,53 @@ int usb_jni_bulk_in(usb_device_handle_t* handle, uint8_t endpoint, void* data, i
     return (result >= 0) ? 0 : (int)result;
 }
 
+int usb_jni_interrupt_transfer_in(usb_device_handle_t* handle,
+                                  uint8_t endpoint,
+                                  void* data,
+                                  int length,
+                                  int* transferred,
+                                  unsigned int timeout_ms)
+{
+    if (!handle || !data || !transferred)
+        return -1;
+
+    JNIEnv *env = handle->env;
+    jobject endpointObj = handle->epMap[endpoint];
+    if (!endpointObj)
+        return -2; // endpoint not registered
+
+    // Find bulkTransferIn(UsbEndpoint, byte[], int, int, int)
+    jclass bridgeCls = (*env)->GetObjectClass(env, handle->bridgeObj);
+    if (!bridgeCls)
+        return -3;
+
+    jmethodID bulkInMid = (*env)->GetMethodID(env, bridgeCls,
+                                              "bulkTransferIn",
+                                              "(Landroid/hardware/usb/UsbEndpoint;[BIII)I");
+    if (!bulkInMid)
+        return -4;
+
+    // Create a Java byte[] to receive data
+    jbyteArray buf = (*env)->NewByteArray(env, length);
+    if (!buf)
+        return -5;
+
+    // Call the Kotlin method
+    jint ret = (*env)->CallIntMethod(env, handle->bridgeObj,
+                                     bulkInMid, endpointObj, buf,
+                                     0, length, (jint)timeout_ms);
+
+    if (ret >= 0) {
+        (*env)->GetByteArrayRegion(env, buf, 0, ret, (jbyte*)data);
+        *transferred = ret;
+    } else {
+        *transferred = 0;
+    }
+
+    (*env)->DeleteLocalRef(env, buf);
+    return (ret >= 0) ? 0 : -6;
+}
+
 int usb_jni_control_transfer(usb_device_handle_t* handle, uint8_t request_type,
                                   uint8_t request, uint16_t value, uint16_t index,
                                   void* data, uint16_t length, int timeout_ms) {
