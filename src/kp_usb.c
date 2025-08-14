@@ -743,213 +743,213 @@ static void get_port_id_and_path(libusb_device *usbdev, uint32_t *port_id, char 
 
 #define MAX_GROUP_DEVICE 20
 
-int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device_t *output_devs[], int try_count)
-{
-	__increase_usb_refcnt();
+// int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device_t *output_devs[], int try_count)
+// {
+// 	__increase_usb_refcnt();
 
-	// this is a workaround for Faraday DFU status and for KN_NUMBER
-	// special process for USB DFU devices (KL720)
-	// if found, minion FW will be downloaded
-	// usb_dfu_scan_download();
+// 	// this is a workaround for Faraday DFU status and for KN_NUMBER
+// 	// special process for USB DFU devices (KL720)
+// 	// if found, minion FW will be downloaded
+// 	// usb_dfu_scan_download();
 
-	for (int i = 0; i < num_dev; i++)
-		output_devs[i] = NULL;
+// 	for (int i = 0; i < num_dev; i++)
+// 		output_devs[i] = NULL;
 
-	libusb_device *wanted_usbdev[MAX_GROUP_DEVICE] = {NULL};
-	bool all_connectable = false;
-	struct libusb_device_descriptor desc;
-	libusb_device **devs_list = NULL;
-	uint8_t endpoint_bulk_in = 0;
-	uint8_t endpoint_bulk_out = 0;
-	uint8_t endpoint_interrupt_in = 0;
+// 	libusb_device *wanted_usbdev[MAX_GROUP_DEVICE] = {NULL};
+// 	bool all_connectable = false;
+// 	struct libusb_device_descriptor desc;
+// 	libusb_device **devs_list = NULL;
+// 	uint8_t endpoint_bulk_in = 0;
+// 	uint8_t endpoint_bulk_out = 0;
+// 	uint8_t endpoint_interrupt_in = 0;
 
-	while (1)
-	{
-		do
-		{
-			if (NULL != devs_list)
-				libusb_free_device_list(devs_list, 1);
+// 	while (1)
+// 	{
+// 		do
+// 		{
+// 			if (NULL != devs_list)
+// 				libusb_free_device_list(devs_list, 1);
 
-			pthread_mutex_lock(&_g_mutex);
-			ssize_t scan_cnt = libusb_get_device_list(NULL, &devs_list);
-			pthread_mutex_unlock(&_g_mutex);
+// 			pthread_mutex_lock(&_g_mutex);
+// 			ssize_t scan_cnt = libusb_get_device_list(NULL, &devs_list);
+// 			pthread_mutex_unlock(&_g_mutex);
 
-			// finding stage
-			int found_count = 0;
-			for (ssize_t i = 0; i < scan_cnt; ++i)
-			{
-				libusb_device *usbdev = devs_list[i];
-				int sts = libusb_get_device_descriptor(usbdev, &desc);
+// 			// finding stage
+// 			int found_count = 0;
+// 			for (ssize_t i = 0; i < scan_cnt; ++i)
+// 			{
+// 				libusb_device *usbdev = devs_list[i];
+// 				int sts = libusb_get_device_descriptor(usbdev, &desc);
 
-				if (sts != 0 || desc.idVendor != VID_KNERON)
-					continue;
+// 				if (sts != 0 || desc.idVendor != VID_KNERON)
+// 					continue;
 
-				uint32_t port_uuid;
-				get_port_id_and_path(usbdev, &port_uuid, NULL);
+// 				uint32_t port_uuid;
+// 				get_port_id_and_path(usbdev, &port_uuid, NULL);
 
-				for (int i = 0; i < num_dev; i++)
-				{
-					if ((uint32_t)port_id[i] == port_uuid)
-					{
-						struct libusb_config_descriptor *config_desc;
-						const struct libusb_interface_descriptor *idesc;
-						uint8_t endpoint_type;
-						wanted_usbdev[found_count++] = usbdev;
-						libusb_get_config_descriptor(usbdev, 0, &config_desc);
+// 				for (int i = 0; i < num_dev; i++)
+// 				{
+// 					if ((uint32_t)port_id[i] == port_uuid)
+// 					{
+// 						struct libusb_config_descriptor *config_desc;
+// 						const struct libusb_interface_descriptor *idesc;
+// 						uint8_t endpoint_type;
+// 						wanted_usbdev[found_count++] = usbdev;
+// 						libusb_get_config_descriptor(usbdev, 0, &config_desc);
 
-						if (0 < config_desc->bNumInterfaces) {
-							idesc = config_desc->interface[0].altsetting;
+// 						if (0 < config_desc->bNumInterfaces) {
+// 							idesc = config_desc->interface[0].altsetting;
 
-							for (int j = 0; j < idesc->bNumEndpoints; ++j) {
-								endpoint_type = (idesc->endpoint[j].bmAttributes & 0x3);
-								if (LIBUSB_TRANSFER_TYPE_BULK == endpoint_type) {
-									if ((idesc->endpoint[j].bEndpointAddress & (1 << 7)) == LIBUSB_ENDPOINT_IN) {
-										endpoint_bulk_in = ((0 == endpoint_bulk_in) || (endpoint_bulk_in > idesc->endpoint[j].bEndpointAddress)) ?
-																idesc->endpoint[j].bEndpointAddress : endpoint_bulk_in;
-									} else {
-										endpoint_bulk_out = ((0 == endpoint_bulk_out) || (endpoint_bulk_out > idesc->endpoint[j].bEndpointAddress)) ?
-																idesc->endpoint[j].bEndpointAddress : endpoint_bulk_out;
-									}
-								} else if (LIBUSB_TRANSFER_TYPE_INTERRUPT == endpoint_type) {
-									endpoint_interrupt_in = ((0 == endpoint_interrupt_in) || (endpoint_interrupt_in > idesc->endpoint[i].bEndpointAddress)) ?
-																idesc->endpoint[j].bEndpointAddress : endpoint_interrupt_in;
-								}
-							}
-						}
+// 							for (int j = 0; j < idesc->bNumEndpoints; ++j) {
+// 								endpoint_type = (idesc->endpoint[j].bmAttributes & 0x3);
+// 								if (LIBUSB_TRANSFER_TYPE_BULK == endpoint_type) {
+// 									if ((idesc->endpoint[j].bEndpointAddress & (1 << 7)) == LIBUSB_ENDPOINT_IN) {
+// 										endpoint_bulk_in = ((0 == endpoint_bulk_in) || (endpoint_bulk_in > idesc->endpoint[j].bEndpointAddress)) ?
+// 																idesc->endpoint[j].bEndpointAddress : endpoint_bulk_in;
+// 									} else {
+// 										endpoint_bulk_out = ((0 == endpoint_bulk_out) || (endpoint_bulk_out > idesc->endpoint[j].bEndpointAddress)) ?
+// 																idesc->endpoint[j].bEndpointAddress : endpoint_bulk_out;
+// 									}
+// 								} else if (LIBUSB_TRANSFER_TYPE_INTERRUPT == endpoint_type) {
+// 									endpoint_interrupt_in = ((0 == endpoint_interrupt_in) || (endpoint_interrupt_in > idesc->endpoint[i].bEndpointAddress)) ?
+// 																idesc->endpoint[j].bEndpointAddress : endpoint_interrupt_in;
+// 								}
+// 							}
+// 						}
 
-						libusb_free_config_descriptor(config_desc);
-						break;
-					}
-				}
-			}
+// 						libusb_free_config_descriptor(config_desc);
+// 						break;
+// 					}
+// 				}
+// 			}
 
-			if (found_count != num_dev)
-				break;
+// 			if (found_count != num_dev)
+// 				break;
 
-			// try connect stage
-			for (int i = 0; i < num_dev; ++i)
-			{
-				// libusb_device_handle *usbdev_handle = 0;
-				usb_device_handle_t *usbdev_handle = 0;
-				int sts = libusb_open(wanted_usbdev[i], &usbdev_handle);
-				if (sts != 0)
-					break;
+// 			// try connect stage
+// 			for (int i = 0; i < num_dev; ++i)
+// 			{
+// 				// libusb_device_handle *usbdev_handle = 0;
+// 				usb_device_handle_t *usbdev_handle = 0;
+// 				int sts = libusb_open(wanted_usbdev[i], &usbdev_handle);
+// 				if (sts != 0)
+// 					break;
 
-				libusb_close(usbdev_handle);
+// 				libusb_close(usbdev_handle);
 
-				if (i == (num_dev - 1))
-					all_connectable = true;
-			}
+// 				if (i == (num_dev - 1))
+// 					all_connectable = true;
+// 			}
 
-		} while (0);
+// 		} while (0);
 
-		if (all_connectable)
-			break;
+// 		if (all_connectable)
+// 			break;
 
-		try_count--;
-		if (try_count <= 0)
-			break;
+// 		try_count--;
+// 		if (try_count <= 0)
+// 			break;
 
-		usleep(100 * 1000); // per 100 ms
-	}
+// 		usleep(100 * 1000); // per 100 ms
+// 	}
 
-	if (!all_connectable)
-	{
-		libusb_free_device_list(devs_list, 1);
-		__decrease_usb_refcnt();
-		return KP_USB_RET_ERR;
-	}
+// 	if (!all_connectable)
+// 	{
+// 		libusb_free_device_list(devs_list, 1);
+// 		__decrease_usb_refcnt();
+// 		return KP_USB_RET_ERR;
+// 	}
 
-	// now all wanted devices are connectable !
-	int ret_code = KP_USB_RET_OK;
-	int num_connected = 0;
+// 	// now all wanted devices are connectable !
+// 	int ret_code = KP_USB_RET_OK;
+// 	int num_connected = 0;
 
-	for (int i = 0; i < num_dev; ++i)
-	{
-		kp_usb_device_t *dev = (kp_usb_device_t *)malloc(sizeof(kp_usb_device_t));
-		if (NULL == dev)
-		{
-			ret_code = KP_USB_USB_NO_MEM;
-			break;
-		}
+// 	for (int i = 0; i < num_dev; ++i)
+// 	{
+// 		kp_usb_device_t *dev = (kp_usb_device_t *)malloc(sizeof(kp_usb_device_t));
+// 		if (NULL == dev)
+// 		{
+// 			ret_code = KP_USB_USB_NO_MEM;
+// 			break;
+// 		}
 
-		// libusb_device_handle *usbdev_handle = 0;
-		usb_device_handle_t *usbdev_handle = 0;
+// 		// libusb_device_handle *usbdev_handle = 0;
+// 		usb_device_handle_t *usbdev_handle = 0;
 
-		int sts = libusb_get_device_descriptor(wanted_usbdev[i], &desc);
-		if (sts != 0)
-		{
-			ret_code = sts;
-			printf("[kp_usb] error to get device descriptor (idx %d), it should work but not !\n", i);
-			free(dev);
-			break;
-		}
+// 		int sts = libusb_get_device_descriptor(wanted_usbdev[i], &desc);
+// 		if (sts != 0)
+// 		{
+// 			ret_code = sts;
+// 			printf("[kp_usb] error to get device descriptor (idx %d), it should work but not !\n", i);
+// 			free(dev);
+// 			break;
+// 		}
 
-		sts = libusb_open(wanted_usbdev[i], &usbdev_handle);
-		if (sts != 0)
-		{
-			ret_code = sts;
-			printf("[kp_usb] error to connect device (idx %d), it should work but not !\n", i);
-			free(dev);
-			break;
-		}
+// 		sts = libusb_open(wanted_usbdev[i], &usbdev_handle);
+// 		if (sts != 0)
+// 		{
+// 			ret_code = sts;
+// 			printf("[kp_usb] error to connect device (idx %d), it should work but not !\n", i);
+// 			free(dev);
+// 			break;
+// 		}
 
-		dev->usb_handle = usbdev_handle;
-		get_port_id_and_path(wanted_usbdev[i], &dev->dev_descp.port_id, dev->dev_descp.port_path);
-		dev->dev_descp.isConnectable = true;
-		dev->dev_descp.vendor_id = VID_KNERON;
-		dev->dev_descp.product_id = desc.idProduct;
-		dev->dev_descp.link_speed = (kp_usb_speed_t)libusb_get_device_speed(wanted_usbdev[i]);
+// 		dev->usb_handle = usbdev_handle;
+// 		get_port_id_and_path(wanted_usbdev[i], &dev->dev_descp.port_id, dev->dev_descp.port_path);
+// 		dev->dev_descp.isConnectable = true;
+// 		dev->dev_descp.vendor_id = VID_KNERON;
+// 		dev->dev_descp.product_id = desc.idProduct;
+// 		dev->dev_descp.link_speed = (kp_usb_speed_t)libusb_get_device_speed(wanted_usbdev[i]);
 
-		dev->fw_serial = desc.bcdDevice;
-		dev->endpoint_cmd_in = endpoint_bulk_in;
-		dev->endpoint_cmd_out = endpoint_bulk_out;
-		dev->endpoint_log_in = endpoint_interrupt_in;
+// 		dev->fw_serial = desc.bcdDevice;
+// 		dev->endpoint_cmd_in = endpoint_bulk_in;
+// 		dev->endpoint_cmd_out = endpoint_bulk_out;
+// 		dev->endpoint_log_in = endpoint_interrupt_in;
 
-		get_fw_name_by_fw_serial(dev->dev_descp.firmware, desc.idProduct, dev->fw_serial);
+// 		get_fw_name_by_fw_serial(dev->dev_descp.firmware, desc.idProduct, dev->fw_serial);
 
-		dev->dev_descp.kn_number = 0x0;
-		if (desc.iSerialNumber > 0)
-		{
-			unsigned char ser_string[16] = {0};
-			unsigned int sernum = 0;
+// 		dev->dev_descp.kn_number = 0x0;
+// 		if (desc.iSerialNumber > 0)
+// 		{
+// 			unsigned char ser_string[16] = {0};
+// 			unsigned int sernum = 0;
 
-			int nbytes = libusb_get_string_descriptor_ascii(usbdev_handle, desc.iSerialNumber, ser_string, 16);
-			if (nbytes == 8)
-				sernum = (unsigned int)strtoul((const char *)ser_string, NULL, 16);
+// 			int nbytes = libusb_get_string_descriptor_ascii(usbdev_handle, desc.iSerialNumber, ser_string, 16);
+// 			if (nbytes == 8)
+// 				sernum = (unsigned int)strtoul((const char *)ser_string, NULL, 16);
 
-			dev->dev_descp.kn_number = sernum;
-		}
+// 			dev->dev_descp.kn_number = sernum;
+// 		}
 
-		pthread_mutex_init(&dev->mutex_send, NULL);
-		pthread_mutex_init(&dev->mutex_recv, NULL);
-		__increase_usb_refcnt();	//move __increase_usb_refcnt here to fix Kneo Pi Segmentation issue
-		//balance the usb_refcnt: kp_usb_disconnect_device also do __decrease_usb_refcnt, but the end of this function also do __decrease_usb_refcnt again.
+// 		pthread_mutex_init(&dev->mutex_send, NULL);
+// 		pthread_mutex_init(&dev->mutex_recv, NULL);
+// 		__increase_usb_refcnt();	//move __increase_usb_refcnt here to fix Kneo Pi Segmentation issue
+// 		//balance the usb_refcnt: kp_usb_disconnect_device also do __decrease_usb_refcnt, but the end of this function also do __decrease_usb_refcnt again.
 
-		if (0 != __kn_configure_usb_device(usbdev_handle))
-		{
-			kp_usb_disconnect_device(dev);
-			ret_code = KP_USB_CONFIGURE_ERR;
-			break; // error
-		}
+// 		if (0 != __kn_configure_usb_device(usbdev_handle))
+// 		{
+// 			kp_usb_disconnect_device(dev);
+// 			ret_code = KP_USB_CONFIGURE_ERR;
+// 			break; // error
+// 		}
 
-		output_devs[num_connected++] = dev;
-	}
+// 		output_devs[num_connected++] = dev;
+// 	}
 
-	if (ret_code != KP_USB_RET_OK)
-	{
-		for (int i = 0; i < num_connected; i++)
-		{
-			kp_usb_disconnect_device(output_devs[i]);
-			output_devs[i] = NULL;
-		}
-	}
+// 	if (ret_code != KP_USB_RET_OK)
+// 	{
+// 		for (int i = 0; i < num_connected; i++)
+// 		{
+// 			kp_usb_disconnect_device(output_devs[i]);
+// 			output_devs[i] = NULL;
+// 		}
+// 	}
 
-	libusb_free_device_list(devs_list, 1);
-	__decrease_usb_refcnt();
+// 	libusb_free_device_list(devs_list, 1);
+// 	__decrease_usb_refcnt();
 
-	return ret_code;
-}
+// 	return ret_code;
+// }
 
 // int kp_usb_disconnect_device(kp_usb_device_t *dev)
 // {
@@ -1061,27 +1061,27 @@ int kp_usb_endpoint_read_data(kp_usb_device_t *dev, int endpoint, void *buf, int
 // APIs for standard read/write in command mode
 // *********************************************************************************************** //
 
-int kp_usb_control(kp_usb_device_t *dev, kp_usb_control_t *control_request, int timeout)
-{
-	uint8_t bmRequestType = 0x40;
-	uint8_t bRequest = control_request->command;
-	uint16_t wValue = control_request->arg1;
-	uint16_t wIndex = control_request->arg2;
-	unsigned char *data = NULL;
-	uint16_t wLength = 0;
+// int kp_usb_control(kp_usb_device_t *dev, kp_usb_control_t *control_request, int timeout)
+// {
+// 	uint8_t bmRequestType = 0x40;
+// 	uint8_t bRequest = control_request->command;
+// 	uint16_t wValue = control_request->arg1;
+// 	uint16_t wIndex = control_request->arg2;
+// 	unsigned char *data = NULL;
+// 	uint16_t wLength = 0;
 
-	int ret = usb_jni_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
+// 	int ret = usb_jni_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
 
-	return ret;
-}
+// 	return ret;
+// }
 
-int kp_usb_read_firmware_log(kp_usb_device_t *dev, void *buf, int len, int timeout)
-{
-	int read_len;
-	int sts = __kn_usb_interrupt_in(dev, dev->endpoint_log_in, buf, len, &read_len, timeout);
+// int kp_usb_read_firmware_log(kp_usb_device_t *dev, void *buf, int len, int timeout)
+// {
+// 	int read_len;
+// 	int sts = __kn_usb_interrupt_in(dev, dev->endpoint_log_in, buf, len, &read_len, timeout);
 
-	if (sts == KP_USB_RET_OK)
-		return read_len;
-	else
-		return sts;
-}
+// 	if (sts == KP_USB_RET_OK)
+// 		return read_len;
+// 	else
+// 		return sts;
+// }

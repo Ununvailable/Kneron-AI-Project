@@ -131,25 +131,50 @@ int usb_jni_interrupt_transfer_in(usb_device_handle_t* handle,
                                   int* transferred,
                                   unsigned int timeout_ms);
 
+// /**
+//  * @brief Fill a kp_device_descriptor_t structure by querying Android USB device info via JNI.
+//  *
+//  * @param env JNI environment pointer for the current thread.
+//  * @param usb_host_bridge Java object providing USB host functionality.
+//  * @param vendor_id Vendor ID of the target device.
+//  * @param product_id Product ID of the target device.
+//  * @param desc Pointer to kp_device_descriptor_t to be populated.
+//  * @return 0 on success, negative error code on failure.
+//  *
+//  * @note If multiple devices match the vendor and product IDs, the first matching device
+//  *       is used. The function fills fields such as port_id, link_speed, kn_number,
+//  *       isConnectable, port_path, and firmware.
+//  */
+// int usb_jni_fill_device_descriptor(JNIEnv *env,
+//                                    jobject usb_host_bridge,
+//                                    uint16_t vendor_id,
+//                                    uint16_t product_id,
+//                                    kp_device_descriptor_t *desc);
+
 /**
- * @brief Fill a kp_device_descriptor_t structure by querying Android USB device info via JNI.
- *
- * @param env JNI environment pointer for the current thread.
- * @param usb_host_bridge Java object providing USB host functionality.
- * @param vendor_id Vendor ID of the target device.
- * @param product_id Product ID of the target device.
- * @param desc Pointer to kp_device_descriptor_t to be populated.
- * @return 0 on success, negative error code on failure.
- *
- * @note If multiple devices match the vendor and product IDs, the first matching device
- *       is used. The function fills fields such as port_id, link_speed, kn_number,
- *       isConnectable, port_path, and firmware.
+ * Cleanup USB JNI interface and release resources
  */
-int usb_jni_fill_device_descriptor(JNIEnv *env,
-                                   jobject usb_host_bridge,
-                                   uint16_t vendor_id,
-                                   uint16_t product_id,
-                                   kp_device_descriptor_t *desc);
+void usb_jni_cleanup(void);
+
+/**
+ * Scan for Kneron USB devices using Android USB API
+ * @return Pointer to scan result structure, NULL on error
+ *         Caller is responsible for freeing the result using usb_jni_free_scan_result()
+ */
+usb_jni_scan_result_t* usb_jni_scan_devices(void);
+
+/**
+ * Free scan result structure and associated memory
+ * @param result Pointer to scan result to free
+ */
+void usb_jni_free_scan_result(usb_jni_scan_result_t* result);
+
+/**
+ * Get JNI environment for current thread
+ * @return JNI environment pointer, NULL on error
+ */
+JNIEnv* usb_jni_get_env(void);
+
 
 #ifdef __cplusplus
 }
