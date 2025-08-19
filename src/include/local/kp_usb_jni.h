@@ -12,6 +12,23 @@ extern "C" {
 // Opaque handle to abstract the underlying UsbDeviceConnection in Android
 typedef struct usb_device_handle usb_device_handle_t;
 
+// Replacing kp_usb_
+typedef struct {
+    uint16_t vendor_id;
+    uint16_t product_id;
+    uint32_t kn_number;
+    uint32_t port_id;
+    char port_path[256];
+    char firmware[64];
+    bool is_connectable;
+    int link_speed;
+} usb_jni_device_info_t;
+
+typedef struct {
+    int num_devices;
+    usb_jni_device_info_t* devices;
+} usb_jni_scan_result_t;
+
 /**
  * @brief Initialize USB abstraction layer.
  *        Must be called before other functions.
@@ -163,11 +180,11 @@ void usb_jni_cleanup(void);
  */
 usb_jni_scan_result_t* usb_jni_scan_devices(void);
 
-/**
- * Free scan result structure and associated memory
- * @param result Pointer to scan result to free
- */
-void usb_jni_free_scan_result(usb_jni_scan_result_t* result);
+// /**
+//  * Free scan result structure and associated memory
+//  * @param result Pointer to scan result to free
+//  */
+// void usb_jni_free_scan_result(usb_jni_scan_result_t* result);
 
 /**
  * Get JNI environment for current thread

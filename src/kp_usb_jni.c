@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <android/log.h>
+#include <pthread.h>
 
 #define LOG_TAG "KP_USB_TRANSPORT"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
@@ -25,28 +26,48 @@ struct usb_device_handle {
 // Global state
 static JavaVM* g_jvm = NULL;
 static jobject g_usb_host_bridge = NULL;
+static pthread_mutex_t g_jni_mutex = PTHREAD_MUTEX_INITIALIZER;
 
-int usb_jni_initialize(JNIEnv* env, jobject usb_host_bridge) {
-    if (!env || !usb_host_bridge) {
-        LOGE("usb_jni_initialize: Invalid parameters");
-        return -1;
+// Static buffer for device list (matching original libusb implementation pattern)
+static kp_devices_list_t* g_kdev_list = NULL;
+static int g_kdev_list_size = 0;
+
+/**
+ * @brief Initialize USB JNI interface (if not already present in existing code)
+ * @note This function may already exist - check before adding
+ */
+bool usb_jni_init(JavaVM* jvm, jobject usb_host_bridge) {
+    if (!jvm || !usb_host_bridge) {
+        LOGE("usb_jni_init: Invalid parameters");
+        return false;
     }
-
-    // Store JavaVM reference
-    if ((*env)->GetJavaVM(env, &g_jvm) != JNI_OK) {
-        LOGE("usb_jni_initialize: Failed to get JavaVM");
-        return -2;
+    
+    pthread_mutex_lock(&g_jni_mutex);
+    
+    g_jvm = jvm;
+    
+    // Create global reference to prevent GC
+    JNIEnv* env = usb_jni_get_env();
+    if (!env) {
+        pthread_mutex_unlock(&g_jni_mutex);
+        return false;
     }
-
-    // Store global reference to USB host bridge
+    
+    if (g_usb_host_bridge) {
+        (*env)->DeleteGlobalRef(env, g_usb_host_bridge);
+    }
+    
     g_usb_host_bridge = (*env)->NewGlobalRef(env, usb_host_bridge);
     if (!g_usb_host_bridge) {
-        LOGE("usb_jni_initialize: Failed to create global reference");
-        return -3;
+        LOGE("usb_jni_init: Failed to create global reference");
+        g_jvm = NULL;
+        pthread_mutex_unlock(&g_jni_mutex);
+        return false;
     }
-
-    LOGD("usb_jni_initialize: Successfully initialized USB jni");
-    return 0;
+    
+    pthread_mutex_unlock(&g_jni_mutex);
+    LOGD("usb_jni_init: Initialization successful");
+    return true;
 }
 
 int usb_jni_finalize(JNIEnv* env) {
@@ -361,3 +382,263 @@ int usb_jni_control_transfer(usb_device_handle_t* handle, uint8_t request_type,
 
     return (int)result;
 }
+
+/**
+ * @brief Cleanup USB JNI interface and release resources
+ * @note This may need to be integrated with existing cleanup function
+ */
+void usb_jni_cleanup(void) {
+    pthread_mutex_lock(&g_jni_mutex);
+    
+    if (g_jvm && g_usb_host_bridge) {
+        JNIEnv* env = usb_jni_get_env();
+        if (env) {
+            (*env)->DeleteGlobalRef(env, g_usb_host_bridge);
+            g_usb_host_bridge = NULL;
+        }
+    }
+    g_jvm = NULL;
+    
+    // Free static scan result buffer
+    if (g_kdev_list) {
+        free(g_kdev_list);
+        g_kdev_list = NULL;
+        g_kdev_list_size = 0;
+    }
+    
+    pthread_mutex_unlock(&g_jni_mutex);
+    LOGD("usb_jni_cleanup: Cleanup completed");
+}
+
+/**
+ * @brief Get JNI environment for current thread
+ * @note This function may already exist - check before adding
+ */
+JNIEnv* usb_jni_get_env(void) {
+    if (!g_jvm) {
+        LOGE("usb_jni_get_env: JavaVM not initialized");
+        return NULL;
+    }
+
+    JNIEnv* env = NULL;
+    jint result = (*g_jvm)->GetEnv(g_jvm, (void**)&env, JNI_VERSION_1_6);
+    
+    if (result == JNI_EDETACHED) {
+        // Current thread is not attached, attach it
+        result = (*g_jvm)->AttachCurrentThread(g_jvm, &env, NULL);
+        if (result != JNI_OK) {
+            LOGE("usb_jni_get_env: Failed to attach current thread");
+            return NULL;
+        }
+    } else if (result != JNI_OK) {
+        LOGE("usb_jni_get_env: Failed to get JNI environment");
+        return NULL;
+    }
+
+    return env;
+}
+
+/**
+ * @brief Generate port_id from port_path (matching original algorithm)
+ */
+static uint32_t generate_port_id_from_path(const char* port_path) {
+    if (!port_path || port_path[0] == '\0') {
+        return 0;
+    }
+    
+    // Parse "busNo-hub_portNo-device_portNo" format
+    uint32_t port_id = 0;
+    char* path_copy = strdup(port_path);
+    if (!path_copy) return 0;
+    
+    char* token = strtok(path_copy, "-");
+    if (token) {
+        // Bus number (2 bits)
+        int bus_number = atoi(token);
+        port_id |= (bus_number & 0x3);
+        
+        // Port numbers (5 bits each)
+        int port_index = 0;
+        while ((token = strtok(NULL, "-")) != NULL && port_index < 6) {
+            int port_num = atoi(token);
+            port_id |= ((uint32_t)port_num << (2 + port_index * 5));
+            port_index++;
+        }
+    }
+    
+    free(path_copy);
+    return port_id;
+}
+
+/**
+ * @brief Scan for Kneron USB devices using Android USB API
+ * Replacement for the original libusb-based kp_usb_scan_devices()
+ */
+kp_devices_list_t* kp_usb_scan_devices(void) {
+    pthread_mutex_lock(&g_jni_mutex);
+    
+    JNIEnv* env = usb_jni_get_env();
+    if (!env || !g_usb_host_bridge) {
+        LOGE("kp_usb_scan_devices: JNI not initialized");
+        pthread_mutex_unlock(&g_jni_mutex);
+        return NULL;
+    }
+
+    // Get the UsbHostBridge class
+    jclass bridge_class = (*env)->GetObjectClass(env, g_usb_host_bridge);
+    if (!bridge_class) {
+        LOGE("kp_usb_scan_devices: Failed to get bridge class");
+        pthread_mutex_unlock(&g_jni_mutex);
+        return NULL;
+    }
+
+    // Get the scanKneronDevices method
+    jmethodID scan_method = (*env)->GetMethodID(env, bridge_class, 
+                                               "scanKneronDevices", 
+                                               "()[Lcom/kneron/usb/KneronDeviceInfo;");
+    if (!scan_method) {
+        LOGE("kp_usb_scan_devices: Failed to get scanKneronDevices method");
+        (*env)->DeleteLocalRef(env, bridge_class);
+        pthread_mutex_unlock(&g_jni_mutex);
+        return NULL;
+    }
+
+    // Call the scan method
+    jobjectArray device_array = (jobjectArray)(*env)->CallObjectMethod(env, 
+                                                                       g_usb_host_bridge, 
+                                                                       scan_method);
+    (*env)->DeleteLocalRef(env, bridge_class);
+    
+    if (!device_array) {
+        LOGD("kp_usb_scan_devices: No devices found or scan failed");
+        // Return empty list (matching original behavior)
+        if (!g_kdev_list) {
+            int need_buf_size = sizeof(int);
+            g_kdev_list = (kp_devices_list_t*)malloc(need_buf_size);
+            if (g_kdev_list) {
+                g_kdev_list_size = need_buf_size;
+            }
+        }
+        if (g_kdev_list) {
+            g_kdev_list->num_dev = 0;
+        }
+        pthread_mutex_unlock(&g_jni_mutex);
+        return g_kdev_list;
+    }
+
+    jsize device_count = (*env)->GetArrayLength(env, device_array);
+    LOGD("kp_usb_scan_devices: Found %d devices", (int)device_count);
+
+    // Calculate required buffer size (matching original algorithm)
+    int need_buf_size = sizeof(int) + device_count * sizeof(kp_device_descriptor_t);
+
+    if (need_buf_size > g_kdev_list_size) {
+        kp_devices_list_t* temp = (kp_devices_list_t*)realloc((void*)g_kdev_list, need_buf_size);
+        if (NULL == temp) {
+            (*env)->DeleteLocalRef(env, device_array);
+            pthread_mutex_unlock(&g_jni_mutex);
+            return NULL;
+        }
+        g_kdev_list = temp;
+        g_kdev_list_size = need_buf_size;
+    }
+
+    g_kdev_list->num_dev = 0;
+
+    if (device_count > 0) {
+        // Get KneronDeviceInfo class and field IDs
+        jclass device_info_class = (*env)->FindClass(env, "com/kneron/usb/KneronDeviceInfo");
+        if (!device_info_class) {
+            LOGE("kp_usb_scan_devices: Failed to find KneronDeviceInfo class");
+            (*env)->DeleteLocalRef(env, device_array);
+            pthread_mutex_unlock(&g_jni_mutex);
+            return NULL;
+        }
+
+        jfieldID vendor_id_field = (*env)->GetFieldID(env, device_info_class, "vendorId", "I");
+        jfieldID product_id_field = (*env)->GetFieldID(env, device_info_class, "productId", "I");
+        jfieldID serial_number_field = (*env)->GetFieldID(env, device_info_class, "serialNumber", "Ljava/lang/String;");
+        jfieldID port_path_field = (*env)->GetFieldID(env, device_info_class, "portPath", "Ljava/lang/String;");
+        jfieldID is_connectable_field = (*env)->GetFieldID(env, device_info_class, "isConnectable", "Z");
+        jfieldID firmware_field = (*env)->GetFieldID(env, device_info_class, "firmware", "Ljava/lang/String;");
+        jfieldID link_speed_field = (*env)->GetFieldID(env, device_info_class, "linkSpeed", "I");
+
+        // Process each device
+        for (jsize i = 0; i < device_count; i++) {
+            jobject device_info = (*env)->GetObjectArrayElement(env, device_array, i);
+            if (!device_info) continue;
+
+            int sidx = g_kdev_list->num_dev;
+            kp_device_descriptor_t* dev = &g_kdev_list->device[sidx];
+
+            // Extract basic device information
+            dev->vendor_id = (uint16_t)(*env)->GetIntField(env, device_info, vendor_id_field);
+            dev->product_id = (uint16_t)(*env)->GetIntField(env, device_info, product_id_field);
+            dev->isConnectable = (*env)->GetBooleanField(env, device_info, is_connectable_field);
+            dev->link_speed = (*env)->GetIntField(env, device_info, link_speed_field);
+
+            // Extract and convert serial number to kn_number (matching original logic)
+            dev->kn_number = 0x0;
+            jstring serial_str = (jstring)(*env)->GetObjectField(env, device_info, serial_number_field);
+            if (serial_str) {
+                const char* serial_cstr = (*env)->GetStringUTFChars(env, serial_str, NULL);
+                if (serial_cstr && strlen(serial_cstr) == 8) {
+                    dev->kn_number = (uint32_t)strtoul(serial_cstr, NULL, 16);
+                }
+                if (serial_cstr) {
+                    (*env)->ReleaseStringUTFChars(env, serial_str, serial_cstr);
+                }
+                (*env)->DeleteLocalRef(env, serial_str);
+            }
+
+            // Extract port path
+            dev->port_path[0] = '\0';
+            jstring port_path_str = (jstring)(*env)->GetObjectField(env, device_info, port_path_field);
+            if (port_path_str) {
+                const char* port_path_cstr = (*env)->GetStringUTFChars(env, port_path_str, NULL);
+                if (port_path_cstr) {
+                    strncpy(dev->port_path, port_path_cstr, sizeof(dev->port_path) - 1);
+                    dev->port_path[sizeof(dev->port_path) - 1] = '\0';
+                    (*env)->ReleaseStringUTFChars(env, port_path_str, port_path_cstr);
+                }
+                (*env)->DeleteLocalRef(env, port_path_str);
+            }
+
+            // Generate port_id from port_path (matching original algorithm)
+            dev->port_id = generate_port_id_from_path(dev->port_path);
+
+            // Extract firmware name
+            dev->firmware[0] = '\0';
+            jstring firmware_str = (jstring)(*env)->GetObjectField(env, device_info, firmware_field);
+            if (firmware_str) {
+                const char* firmware_cstr = (*env)->GetStringUTFChars(env, firmware_str, NULL);
+                if (firmware_cstr) {
+                    strncpy(dev->firmware, firmware_cstr, sizeof(dev->firmware) - 1);
+                    dev->firmware[sizeof(dev->firmware) - 1] = '\0';
+                    (*env)->ReleaseStringUTFChars(env, firmware_str, firmware_cstr);
+                }
+                (*env)->DeleteLocalRef(env, firmware_str);
+            }
+
+            (*env)->DeleteLocalRef(env, device_info);
+            ++g_kdev_list->num_dev;
+        }
+
+        (*env)->DeleteLocalRef(env, device_info_class);
+    }
+
+    (*env)->DeleteLocalRef(env, device_array);
+    
+    pthread_mutex_unlock(&g_jni_mutex);
+    LOGD("kp_usb_scan_devices: Successfully scanned %d devices", g_kdev_list->num_dev);
+    return g_kdev_list;
+}
+
+// void usb_jni_free_scan_result(usb_jni_scan_result_t* result) {
+//     if (result) {
+//         if (result->devices) {
+//             free(result->devices);
+//         }
+//         free(result);
+//     }
+// }

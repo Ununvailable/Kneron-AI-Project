@@ -578,140 +578,141 @@ static void get_fw_name_by_fw_serial(char *fw_name, uint16_t product_id, uint16_
 // *********************************************************************************************** //
 // APIs for device initialization
 // *********************************************************************************************** //
-kp_devices_list_t *kp_usb_scan_devices()
-{
-	static kp_devices_list_t *kdev_list = NULL;
-	static int kdev_list_size = 0;
+// kp_devices_list_t *kp_usb_scan_devices()
+// {
+// 	static kp_devices_list_t *kdev_list = NULL;
+// 	static int kdev_list_size = 0;
 
-	libusb_device **devs_list;
-	ssize_t cnt;
+// 	libusb_device **devs_list;
+// 	ssize_t cnt;
 
-	__increase_usb_refcnt();
+// 	__increase_usb_refcnt();
 
-	// this is a workaround for Faraday DFU status and for KN_NUMBER
-	// special process for USB DFU devices (KL720)
-	// if found, minion FW will be downloaded
-	// usb_dfu_scan_download();
+// 	// this is a workaround for Faraday DFU status and for KN_NUMBER
+// 	// special process for USB DFU devices (KL720)
+// 	// if found, minion FW will be downloaded
+// 	// usb_dfu_scan_download();
 
-	pthread_mutex_lock(&_g_mutex);
-	cnt = libusb_get_device_list(NULL, &devs_list);
-	pthread_mutex_unlock(&_g_mutex);
+// 	pthread_mutex_lock(&_g_mutex);
+// 	cnt = libusb_get_device_list(NULL, &devs_list);
+// 	pthread_mutex_unlock(&_g_mutex);
 
-	if (cnt < 0)
-	{
-		__decrease_usb_refcnt();
-		return NULL;
-	}
+// 	if (cnt < 0)
+// 	{
+// 		__decrease_usb_refcnt();
+// 		return NULL;
+// 	}
 
-	int need_buf_size = sizeof(int) + cnt * sizeof(kp_device_descriptor_t);
+// 	int need_buf_size = sizeof(int) + cnt * sizeof(kp_device_descriptor_t);
 
-	if (need_buf_size > kdev_list_size)
-	{
-		kp_devices_list_t *temp = (kp_devices_list_t *)realloc((void *)kdev_list, need_buf_size);
-		if (NULL == temp)
-			return NULL;
-		kdev_list = temp;
-		kdev_list_size = need_buf_size;
-	}
+// 	if (need_buf_size > kdev_list_size)
+// 	{
+// 		kp_devices_list_t *temp = (kp_devices_list_t *)realloc((void *)kdev_list, need_buf_size);
+// 		if (NULL == temp)
+// 			return NULL;
+// 		kdev_list = temp;
+// 		kdev_list_size = need_buf_size;
+// 	}
 
-	kdev_list->num_dev = 0;
+// 	kdev_list->num_dev = 0;
 
-	libusb_device *dev;
-	int i = 0;
+// 	libusb_device *dev;
+// 	int i = 0;
 
-	while ((dev = devs_list[i++]) != NULL)
-	{
+// 	while ((dev = devs_list[i++]) != NULL)
+// 	{
 
-		struct libusb_device_descriptor desc;
-		int r = libusb_get_device_descriptor(dev, &desc);
-		if (r < 0)
-		{
-			continue;
-		}
+// 		struct libusb_device_descriptor desc;
+// 		int r = libusb_get_device_descriptor(dev, &desc);
+// 		if (r < 0)
+// 		{
+// 			continue;
+// 		}
 
-		if (desc.idVendor == VID_KNERON)
-		{
-			int sidx = kdev_list->num_dev;
+// 		if (desc.idVendor == VID_KNERON)
+// 		{
+// 			int sidx = kdev_list->num_dev;
 
-			kdev_list->device[sidx].vendor_id = desc.idVendor;
-			kdev_list->device[sidx].product_id = desc.idProduct;
-			kdev_list->device[sidx].link_speed = (kp_usb_speed_t)libusb_get_device_speed(dev);
+// 			kdev_list->device[sidx].vendor_id = desc.idVendor;
+// 			kdev_list->device[sidx].product_id = desc.idProduct;
+// 			kdev_list->device[sidx].link_speed = (kp_usb_speed_t)libusb_get_device_speed(dev);
 
-			get_fw_name_by_fw_serial(kdev_list->device[sidx].firmware, desc.idProduct, desc.bcdDevice);
+// 			get_fw_name_by_fw_serial(kdev_list->device[sidx].firmware, desc.idProduct, desc.bcdDevice);
 
-			kdev_list->device[sidx].port_id = 0x0;
+// 			kdev_list->device[sidx].port_id = 0x0;
 
-			uint8_t bus_number;
-			uint8_t ports_number[7];
+// 			uint8_t bus_number;
+// 			uint8_t ports_number[7];
 
-			bus_number = libusb_get_bus_number(dev);
-			int port_depth = libusb_get_port_numbers(dev, ports_number, 7);
+// 			bus_number = libusb_get_bus_number(dev);
+// 			int port_depth = libusb_get_port_numbers(dev, ports_number, 7);
 
-			kdev_list->device[sidx].port_id |= (bus_number & 0x3); // 2 bits
+// 			kdev_list->device[sidx].port_id |= (bus_number & 0x3); // 2 bits
 
-			for (int i = 0; i < port_depth; i++)
-				kdev_list->device[sidx].port_id |= ((uint32_t)ports_number[i] << (2 + i * 5));
+// 			for (int i = 0; i < port_depth; i++)
+// 				kdev_list->device[sidx].port_id |= ((uint32_t)ports_number[i] << (2 + i * 5));
 
-			kdev_list->device[sidx].port_path[0] = 0;
-			sprintf(kdev_list->device[sidx].port_path, "%d", bus_number);
+// 			kdev_list->device[sidx].port_path[0] = 0;
+// 			sprintf(kdev_list->device[sidx].port_path, "%d", bus_number);
 
-            char temp_str[5];
-			for (int j = 0; j < port_depth; j++)
-			{
-				snprintf(temp_str, sizeof(temp_str), "-%d", ports_number[j]);
-				strcat(kdev_list->device[sidx].port_path, temp_str);
-			}
+//             char temp_str[5];
+// 			for (int j = 0; j < port_depth; j++)
+// 			{
+// 				snprintf(temp_str, sizeof(temp_str), "-%d", ports_number[j]);
+// 				strcat(kdev_list->device[sidx].port_path, temp_str);
+// 			}
 
-			kdev_list->device[sidx].kn_number = 0x0;
+// 			kdev_list->device[sidx].kn_number = 0x0;
 
-			// libusb_device_handle *dev_handle = 0;
-			usb_device_handle_t *dev_handle = 0;
-			int sts = libusb_open(dev, &dev_handle);
-			if (sts == 0)
-			{
-				bool isConnectable = true;
+// 			// libusb_device_handle *dev_handle = 0;
+// 			usb_device_handle_t *dev_handle = 0;
+// 			int sts = libusb_open(dev, &dev_handle);
+// 			if (sts == 0)
+// 			{
+// 				bool isConnectable = true;
 
-				/* Since libusb_open always success on linux-based system */
-				/* Double check whether device is occupied */
-				sts = libusb_attach_kernel_driver(dev_handle, 0);
+// 				/* Since libusb_open always success on linux-based system */
+// 				/* Double check whether device is occupied */
+// 				sts = libusb_attach_kernel_driver(dev_handle, 0);
 
-				if (KP_ERROR_USB_BUSY_N6 == sts) {
-					isConnectable = false;
-				}
+// 				if (KP_ERROR_USB_BUSY_N6 == sts) {
+// 					isConnectable = false;
+// 				}
 
-				kdev_list->device[sidx].isConnectable = isConnectable;
+// 				kdev_list->device[sidx].isConnectable = isConnectable;
 
-				if (desc.iSerialNumber > 0)
-				{
-					unsigned char ser_string[16] = {0};
-					unsigned int sernum = 0;
+// 				if (desc.iSerialNumber > 0)
+// 				{
+// 					unsigned char ser_string[16] = {0};
+// 					unsigned int sernum = 0;
 
-					int nbytes = libusb_get_string_descriptor_ascii(dev_handle, desc.iSerialNumber, ser_string, 16);
+// 					int nbytes = libusb_get_string_descriptor_ascii(dev_handle, desc.iSerialNumber, ser_string, 16);
 
-					if (nbytes == 8)
-						sernum = (unsigned int)strtoul((const char *)ser_string, NULL, 16);
+// 					if (nbytes == 8)
+// 						sernum = (unsigned int)strtoul((const char *)ser_string, NULL, 16);
 
-					kdev_list->device[sidx].kn_number = sernum;
-				}
+// 					kdev_list->device[sidx].kn_number = sernum;
+// 				}
 
-				libusb_close(dev_handle);
-			}
-			else
-			{
-				kdev_list->device[sidx].isConnectable = false;
-				dbg_print("%s() libusb_open failed, error %d\n", __func__, sts);
-			}
+// 				libusb_close(dev_handle);
+// 			}
+// 			else
+// 			{
+// 				kdev_list->device[sidx].isConnectable = false;
+// 				dbg_print("%s() libusb_open failed, error %d\n", __func__, sts);
+// 			}
 
-			++kdev_list->num_dev;
-		}
-	}
+// 			++kdev_list->num_dev;
+// 		}
+// 	}
 
-	libusb_free_device_list(devs_list, 1);
+// 	libusb_free_device_list(devs_list, 1);
 
-	__decrease_usb_refcnt();
+// 	__decrease_usb_refcnt();
 
-	return kdev_list;
-}
+// 	return kdev_list;
+// }
+
 
 static void get_port_id_and_path(libusb_device *usbdev, uint32_t *port_id, char *port_path)
 {
