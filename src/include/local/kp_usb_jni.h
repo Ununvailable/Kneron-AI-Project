@@ -106,17 +106,24 @@ int usb_jni_bulk_in(usb_device_handle_t* handle,
                     int timeout_ms);
 
 /**
- * @brief Perform a control transfer.
+ * @brief Perform a USB control transfer via JNI.
  *
- * @param handle Device handle.
+ * This wraps Android's USB request API. It supports both host-to-device (OUT)
+ * and device-to-host (IN) transfers. The caller is responsible for ensuring
+ * that the device handle and environment are valid.
+ *
+ * @param handle       Device handle (JNI-backed USB device).
  * @param request_type bmRequestType field of the setup packet.
- * @param request bRequest field of the setup packet.
- * @param value wValue field of the setup packet.
- * @param index wIndex field of the setup packet.
- * @param data Pointer to data buffer for data stage.
- * @param length Length of data buffer.
- * @param timeout_ms Timeout in milliseconds.
- * @return Number of bytes transferred on success (>=0), negative error code on failure.
+ * @param request      bRequest field of the setup packet.
+ * @param value        wValue field of the setup packet.
+ * @param index        wIndex field of the setup packet.
+ * @param data         Pointer to data buffer for transfer.
+ *                     - For OUT: contents are sent to device.
+ *                     - For IN: buffer is filled with data from device.
+ * @param length       Length of data buffer in bytes.
+ * @param timeout_ms   Timeout in milliseconds.
+ *
+ * @return Number of bytes transferred (>= 0) on success, negative error code on failure.
  */
 int usb_jni_control_transfer(usb_device_handle_t* handle,
                              uint8_t request_type,
@@ -178,7 +185,7 @@ void usb_jni_cleanup(void);
  * @return Pointer to scan result structure, NULL on error
  *         Caller is responsible for freeing the result using usb_jni_free_scan_result()
  */
-usb_jni_scan_result_t* usb_jni_scan_devices(void);
+kp_devices_list_t* usb_jni_scan_devices(void);
 
 // /**
 //  * Free scan result structure and associated memory

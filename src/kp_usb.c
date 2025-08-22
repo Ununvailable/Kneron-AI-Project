@@ -182,9 +182,9 @@ static void __increase_usb_refcnt()
 	pthread_mutex_lock(&_g_mutex);
 	if (_g_libusb_ref_count == 0)
 	{
-		if (0 != libusb_init(NULL))
-			// FIXME: do something ?
-			dbg_print("[%s] [kp_usb] libusb_init() failed\n", __func__);
+		// if (0 != libusb_init(NULL))
+		// 	// FIXME: do something ?
+		// 	dbg_print("[%s] [kp_usb] libusb_init() failed\n", __func__);
 	}
 	++_g_libusb_ref_count;
 	pthread_mutex_unlock(&_g_mutex);
@@ -196,87 +196,87 @@ static void __decrease_usb_refcnt()
 	--_g_libusb_ref_count;
 	if (_g_libusb_ref_count == 0)
 	{
-		libusb_exit(NULL);
+		// libusb_exit(NULL);
 	}
 	pthread_mutex_unlock(&_g_mutex);
 }
 
-static int __kn_configure_usb_device(kp_usb_device_t *usbdev_handle)
-{
-	int status;
-	int config;
+// static int __kn_configure_usb_device(kp_usb_device_t *usbdev_handle)
+// {
+// 	int status;
+// 	int config;
 
-	status = libusb_get_configuration(usbdev_handle, &config);
-	if (status)
-	{
-		dbg_print("[%s] [khost_usb] get config failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
-		return status;
-	}
+// 	status = libusb_get_configuration(usbdev_handle, &config);
+// 	if (status)
+// 	{
+// 		dbg_print("[%s] [khost_usb] get config failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
+// 		return status;
+// 	}
 
-	if (config == 0)
-	{
-		status = libusb_set_configuration(usbdev_handle, 1);
-		if (status)
-		{
-			dbg_print("[%s] [khost_usb] set config failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
-			return status;
-		}
-	}
+// 	if (config == 0)
+// 	{
+// 		status = libusb_set_configuration(usbdev_handle, 1);
+// 		if (status)
+// 		{
+// 			dbg_print("[%s] [khost_usb] set config failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
+// 			return status;
+// 		}
+// 	}
 
-	status = libusb_claim_interface(usbdev_handle, 0);
-	if (status)
-	{
-		dbg_print("[%s] [khost_usb] libusb_claim_interface() failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
-		return status;
-	}
+// 	status = libusb_claim_interface(usbdev_handle, 0);
+// 	if (status)
+// 	{
+// 		dbg_print("[%s] [khost_usb] libusb_claim_interface() failed: %s\n", __func__, libusb_strerror((enum libusb_error)status));
+// 		return status;
+// 	}
 
-	return 0;
-}
+// 	return 0;
+// }
 
-static int __kn_usb_interrupt_in(kp_usb_device_t *dev, unsigned char endpoint, void *buf, int buf_size, int *recv_size, unsigned int timeout)
-{
-	// libusb_device_handle *usbdev = dev->usb_handle;
-	usb_device_handle_t *usbdev = dev->usb_handle;
+// static int __kn_usb_interrupt_in(usb_device_handle_t *dev, unsigned char endpoint, void *buf, int buf_size, int *recv_size, unsigned int timeout)
+// {
+// 	// libusb_device_handle *usbdev = dev->usb_handle;
+// 	usb_device_handle_t *usbdev = dev->usb_handle;
 
-	int status;
-	int transferred;
-	uintptr_t cur_read_address = (uintptr_t)buf;
-	int max_txfer_size = MAX_TXFER_SIZE;
+// 	int status;
+// 	int transferred;
+// 	uintptr_t cur_read_address = (uintptr_t)buf;
+// 	int max_txfer_size = MAX_TXFER_SIZE;
 
-	//[KL730 HAPS]
-	//After upgrade to the kernel version 6.1, we found the a usb receive stuck issue.
-	//It should be related to usb dwc3 driver in kernel 6.1.
-	//Here is a workaround before FDD team find the root cause.
-	//This setting also need to sync-up with PLUS side.
-	// if(dev->dev_descp.product_id == KP_DEVICE_KL730)
-	// 	max_txfer_size = 1044480;
+// 	//[KL730 HAPS]
+// 	//After upgrade to the kernel version 6.1, we found the a usb receive stuck issue.
+// 	//It should be related to usb dwc3 driver in kernel 6.1.
+// 	//Here is a workaround before FDD team find the root cause.
+// 	//This setting also need to sync-up with PLUS side.
+// 	// if(dev->dev_descp.product_id == KP_DEVICE_KL730)
+// 	// 	max_txfer_size = 1044480;
 
-	*recv_size = 0;
+// 	*recv_size = 0;
 
-	int _buf_size = buf_size;
-	while (1)
-	{
-		int one_buf_size = MIN(_buf_size, max_txfer_size);
-		_buf_size -= one_buf_size;
+// 	int _buf_size = buf_size;
+// 	while (1)
+// 	{
+// 		int one_buf_size = MIN(_buf_size, max_txfer_size);
+// 		_buf_size -= one_buf_size;
 
-		status = usb_jni_interrupt_transfer_in(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
+// 		status = usb_jni_interrupt_transfer_in(usbdev, endpoint, (unsigned char *)cur_read_address, one_buf_size, &transferred, timeout);
 
-		if (status != 0)
-		{
-			dbg_print("[%s] [kp_usb] recv data failed error: %s\n", __func__, libusb_strerror((enum libusb_error)status));
-			return status;
-		}
+// 		if (status != 0)
+// 		{
+// 			dbg_print("[%s] [kp_usb] recv data failed error: %s\n", __func__, libusb_strerror((enum libusb_error)status));
+// 			return status;
+// 		}
 
-		*recv_size += transferred;
+// 		*recv_size += transferred;
 
-		cur_read_address += transferred;
+// 		cur_read_address += transferred;
 
-		if (transferred < one_buf_size || _buf_size == 0)
-			break;
-	}
+// 		if (transferred < one_buf_size || _buf_size == 0)
+// 			break;
+// 	}
 
-	return KP_USB_RET_OK;
-}
+// 	return KP_USB_RET_OK;
+// }
 
 enum dfu_state
 {
@@ -304,124 +304,124 @@ enum dfu_state
 
 #include <unistd.h>
 
-static int usb_dfu_get_status(libusb_device_handle *usb_handle)
-{
-	int length = 6;
-	unsigned char data[0x10];
-	uint8_t bmRequestType = KP_USB_ENDPOINT_IN | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
-	uint8_t bRequest = DFU_GETSTATUS;
-	int ret = usb_jni_control_transfer(usb_handle, bmRequestType, bRequest, 0, 0, data, (uint16_t)length, 1000);
+// static int usb_dfu_get_status(libusb_device_handle *usb_handle)
+// {
+// 	int length = 6;
+// 	unsigned char data[0x10];
+// 	uint8_t bmRequestType = KP_USB_ENDPOINT_IN | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
+// 	uint8_t bRequest = DFU_GETSTATUS;
+// 	int ret = usb_jni_control_transfer(usb_handle, bmRequestType, bRequest, 0, 0, data, (uint16_t)length, 1000);
 
-	return (0 < ret) ? data[4] : ret;
-}
+// 	return (0 < ret) ? data[4] : ret;
+// }
 
-static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_size)
-{
-	dbg_print("starting loading file ...\n");
+// static int usb_dfu_download(libusb_device *dev, unsigned char *p_buf, int buf_size)
+// {
+// 	// dbg_print("starting loading file ...\n");
 
-	// libusb_device_handle *usb_handle;
-	usb_device_handle_t *usb_handle;
-	int ret = libusb_open(dev, &usb_handle);
+// 	// // libusb_device_handle *usb_handle;
+// 	// usb_device_handle_t *usb_handle;
+// 	// int ret = libusb_open(dev, &usb_handle);
 
-	if (0 != ret) {
-		return ret;
-	}
+// 	// if (0 != ret) {
+// 	// 	return ret;
+// 	// }
 
-	if (0 != __kn_configure_usb_device(usb_handle))
-	{
-		libusb_close(usb_handle);
+// 	// if (0 != __kn_configure_usb_device(usb_handle))
+// 	// {
+// 	// 	libusb_close(usb_handle);
 
-		return KP_USB_CONFIGURE_ERR;
-	}
+// 	// 	return KP_USB_CONFIGURE_ERR;
+// 	// }
 
-	int cnt = 0;
-	int dfu_status = -1;
-	while (buf_size)
-	{
-		dfu_status = usb_dfu_get_status(usb_handle);
-		if (dfu_status != DFU_STATE_dfuERROR)
-		{
-			uint8_t bmRequestType = KP_USB_ENDPOINT_OUT | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
-			long txfer_size = (buf_size > 2048) ? 2048 : buf_size;
-			usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, p_buf + (cnt * 2048), (uint16_t)txfer_size, 1000);
-			buf_size -= txfer_size;
-			cnt++;
-		}
-		else //if(dfu_status==DFU_STATE_dfuERROR)
-		{
-			printf("usb dfu device report ERROR STATE\n");
-		}
-	}
+// 	// int cnt = 0;
+// 	// int dfu_status = -1;
+// 	// while (buf_size)
+// 	// {
+// 	// 	dfu_status = usb_dfu_get_status(usb_handle);
+// 	// 	if (dfu_status != DFU_STATE_dfuERROR)
+// 	// 	{
+// 	// 		uint8_t bmRequestType = KP_USB_ENDPOINT_OUT | KP_USB_REQUEST_TYPE_CLASS | KP_USB_RECIPIENT_INTERFACE;
+// 	// 		long txfer_size = (buf_size > 2048) ? 2048 : buf_size;
+// 	// 		usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, p_buf + (cnt * 2048), (uint16_t)txfer_size, 1000);
+// 	// 		buf_size -= txfer_size;
+// 	// 		cnt++;
+// 	// 	}
+// 	// 	else //if(dfu_status==DFU_STATE_dfuERROR)
+// 	// 	{
+// 	// 		printf("usb dfu device report ERROR STATE\n");
+// 	// 	}
+// 	// }
 
-	dfu_status = usb_dfu_get_status(usb_handle);
-	if (dfu_status != DFU_STATE_dfuERROR)
-	{
-		uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_STANDARD | LIBUSB_REQUEST_TYPE_CLASS;
-		usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, NULL, 0, 1000);
-	}
-	else //if(dfu_status==DFU_STATE_dfuERROR)
-	{
-		printf("usb dfu device report ERROR STATE\n");
-	}
+// 	// dfu_status = usb_dfu_get_status(usb_handle);
+// 	// if (dfu_status != DFU_STATE_dfuERROR)
+// 	// {
+// 	// 	uint8_t bmRequestType = LIBUSB_ENDPOINT_OUT | LIBUSB_REQUEST_TYPE_STANDARD | LIBUSB_REQUEST_TYPE_CLASS;
+// 	// 	usb_jni_control_transfer(usb_handle, bmRequestType, DFU_DNLOAD, cnt, 0, NULL, 0, 1000);
+// 	// }
+// 	// else //if(dfu_status==DFU_STATE_dfuERROR)
+// 	// {
+// 	// 	printf("usb dfu device report ERROR STATE\n");
+// 	// }
 
-	do
-	{
-		dfu_status = usb_dfu_get_status(usb_handle);
-	} while (dfu_status != DFU_STATE_appIDLE);
+// 	// do
+// 	// {
+// 	// 	dfu_status = usb_dfu_get_status(usb_handle);
+// 	// } while (dfu_status != DFU_STATE_appIDLE);
 
-	libusb_reset_device(usb_handle);
-	libusb_close(usb_handle);
+// 	// libusb_reset_device(usb_handle);
+// 	// libusb_close(usb_handle);
 
-	return 0;
-}
+// 	return 0;
+// }
 
 static int usb_dfu_scan_download()
 {
-	int ret;
+	int ret = 0;
 
-	__increase_usb_refcnt();
+	// __increase_usb_refcnt();
 
-	libusb_device **devs_list;
-	bool ifHappend = false;
+	// libusb_device **devs_list;
+	// bool ifHappend = false;
 
-	pthread_mutex_lock(&_g_mutex);
-	ssize_t cnt = libusb_get_device_list(NULL, &devs_list);
-	pthread_mutex_unlock(&_g_mutex);
+	// pthread_mutex_lock(&_g_mutex);
+	// ssize_t cnt = libusb_get_device_list(NULL, &devs_list);
+	// pthread_mutex_unlock(&_g_mutex);
 
-	if (cnt >= 0)
-	{
-		ret = 0;
+	// if (cnt >= 0)
+	// {
+	// 	ret = 0;
 
-		for (int i = 0; i < cnt; i++)
-		{
-			libusb_device *dev = devs_list[i];
+	// 	for (int i = 0; i < cnt; i++)
+	// 	{
+	// 		libusb_device *dev = devs_list[i];
 
-			struct libusb_device_descriptor desc;
-			int r = libusb_get_device_descriptor(dev, &desc);
-			if (r < 0)
-				continue;
+	// 		struct libusb_device_descriptor desc;
+	// 		int r = libusb_get_device_descriptor(dev, &desc);
+	// 		if (r < 0)
+	// 			continue;
 
-			if (desc.idVendor == VID_KNERON && desc.idProduct == KP_DEVICE_KL720 && desc.bcdDevice == KP_KDP2_FW_KL720_USB_DFU)
-			{
-				// BetterMe: use threads to handle multiple devices
-				ifHappend = true;
-				usb_dfu_download(dev, kl720_usb_minion_fw, sizeof(kl720_usb_minion_fw));
-			}
+	// 		if (desc.idVendor == VID_KNERON && desc.idProduct == KP_DEVICE_KL720 && desc.bcdDevice == KP_KDP2_FW_KL720_USB_DFU)
+	// 		{
+	// 			// BetterMe: use threads to handle multiple devices
+	// 			ifHappend = true;
+	// 			usb_dfu_download(dev, kl720_usb_minion_fw, sizeof(kl720_usb_minion_fw));
+	// 		}
 
-			continue;
-		}
-	}
-	else
-	{
-		ret = (int)cnt; // libusb_error
-	}
+	// 		continue;
+	// 	}
+	// }
+	// else
+	// {
+	// 	ret = (int)cnt; // libusb_error
+	// }
 
-	libusb_free_device_list(devs_list, 1);
+	// libusb_free_device_list(devs_list, 1);
 
-	__decrease_usb_refcnt();
+	// __decrease_usb_refcnt();
 
-	if (ifHappend)
-		usleep(500 * 1000); // FIXME, better timing
+	// if (ifHappend)
+	// 	usleep(500 * 1000); // FIXME, better timing
 
 	return ret;
 }
@@ -578,8 +578,8 @@ static void get_fw_name_by_fw_serial(char *fw_name, uint16_t product_id, uint16_
 // *********************************************************************************************** //
 // APIs for device initialization
 // *********************************************************************************************** //
-// kp_devices_list_t *kp_usb_scan_devices()
-// {
+kp_devices_list_t *kp_usb_scan_devices()
+{
 // 	static kp_devices_list_t *kdev_list = NULL;
 // 	static int kdev_list_size = 0;
 
@@ -710,37 +710,38 @@ static void get_fw_name_by_fw_serial(char *fw_name, uint16_t product_id, uint16_
 
 // 	__decrease_usb_refcnt();
 
-// 	return kdev_list;
-// }
-
-
-static void get_port_id_and_path(libusb_device *usbdev, uint32_t *port_id, char *port_path)
-{
-	uint32_t port_uuid = 0;
-	uint8_t ports_number[7];
-	uint8_t bus_number = libusb_get_bus_number(usbdev);
-	int port_depth = libusb_get_port_numbers(usbdev, ports_number, 7);
-
-	port_uuid |= (bus_number & 0x3); // 2 bits
-
-	for (int i = 0; i < port_depth; i++)
-		port_uuid |= ((uint32_t)ports_number[i] << (2 + i * 5));
-
-	if (NULL != port_path)
-	{
-		port_path[0] = 0;
-		sprintf(port_path, "%d", bus_number);
-
-        char temp_str[5];
-		for (int j = 0; j < port_depth; j++)
-		{
-			snprintf(temp_str, sizeof(temp_str), "-%d", ports_number[j]);
-			strcat(port_path, temp_str);
-		}
-	}
-
-	*port_id = port_uuid;
+	// return kdev_list;
+	return usb_jni_scan_devices();
 }
+
+
+// static void get_port_id_and_path(libusb_device *usbdev, uint32_t *port_id, char *port_path)
+// {
+// 	uint32_t port_uuid = 0;
+// 	uint8_t ports_number[7];
+// 	uint8_t bus_number = libusb_get_bus_number(usbdev);
+// 	int port_depth = libusb_get_port_numbers(usbdev, ports_number, 7);
+
+// 	port_uuid |= (bus_number & 0x3); // 2 bits
+
+// 	for (int i = 0; i < port_depth; i++)
+// 		port_uuid |= ((uint32_t)ports_number[i] << (2 + i * 5));
+
+// 	if (NULL != port_path)
+// 	{
+// 		port_path[0] = 0;
+// 		sprintf(port_path, "%d", bus_number);
+
+//         char temp_str[5];
+// 		for (int j = 0; j < port_depth; j++)
+// 		{
+// 			snprintf(temp_str, sizeof(temp_str), "-%d", ports_number[j]);
+// 			strcat(port_path, temp_str);
+// 		}
+// 	}
+
+// 	*port_id = port_uuid;
+// }
 
 #define MAX_GROUP_DEVICE 20
 
@@ -952,34 +953,34 @@ static void get_port_id_and_path(libusb_device *usbdev, uint32_t *port_id, char 
 // 	return ret_code;
 // }
 
-// int kp_usb_disconnect_device(kp_usb_device_t *dev)
-// {
-// 	// libusb_device_handle *usbdev = dev->usb_handle;
-// 	usb_device_handle_t *usbdev = dev->usb_handle;
-// 	libusb_close(usbdev);
-// 	__decrease_usb_refcnt();
+int kp_usb_disconnect_device(kp_usb_device_t *dev)
+{
+	// // libusb_device_handle *usbdev = dev->usb_handle;
+	// usb_device_handle_t *usbdev = dev->usb_handle;
+	// libusb_close(usbdev);
+	// __decrease_usb_refcnt();
 
-// 	pthread_mutex_destroy(&dev->mutex_send);
-// 	pthread_mutex_destroy(&dev->mutex_recv);
+	// pthread_mutex_destroy(&dev->mutex_send);
+	// pthread_mutex_destroy(&dev->mutex_recv);
 
-// 	free(dev);
+	// free(dev);
 
-// 	return KP_USB_RET_OK;
-// }
+	return KP_USB_RET_OK;
+}
 
-// int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[])
-// {
-// 	for (int i = 0; i < num_dev; i++)
-// 	{
-// 		if (devs[i] != NULL)
-// 		{
-// 			kp_usb_disconnect_device(devs[i]);
-// 			devs[i] = NULL;
-// 		}
-// 	}
+int kp_usb_disconnect_multiple_devices(int num_dev, kp_usb_device_t *devs[])
+{
+	for (int i = 0; i < num_dev; i++)
+	{
+		if (devs[i] != NULL)
+		{
+			kp_usb_disconnect_device(devs[i]);
+			devs[i] = NULL;
+		}
+	}
 
-// 	return KP_USB_RET_OK;
-// }
+	return KP_USB_RET_OK;
+}
 
 kp_device_descriptor_t *kp_usb_get_device_descriptor(kp_usb_device_t *dev)
 {
