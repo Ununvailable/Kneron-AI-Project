@@ -745,8 +745,8 @@ kp_devices_list_t *kp_usb_scan_devices()
 
 #define MAX_GROUP_DEVICE 20
 
-// int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device_t *output_devs[], int try_count)
-// {
+int kp_usb_connect_multiple_devices_v2(int num_dev, int port_id[], kp_usb_device_t *output_devs[], int try_count)
+{
 // 	__increase_usb_refcnt();
 
 // 	// this is a workaround for Faraday DFU status and for KN_NUMBER
@@ -862,8 +862,8 @@ kp_devices_list_t *kp_usb_scan_devices()
 // 		return KP_USB_RET_ERR;
 // 	}
 
-// 	// now all wanted devices are connectable !
-// 	int ret_code = KP_USB_RET_OK;
+	// now all wanted devices are connectable !
+	int ret_code = KP_USB_RET_OK;
 // 	int num_connected = 0;
 
 // 	for (int i = 0; i < num_dev; ++i)
@@ -950,8 +950,8 @@ kp_devices_list_t *kp_usb_scan_devices()
 // 	libusb_free_device_list(devs_list, 1);
 // 	__decrease_usb_refcnt();
 
-// 	return ret_code;
-// }
+	return ret_code;
+}
 
 int kp_usb_disconnect_device(kp_usb_device_t *dev)
 {
@@ -1063,27 +1063,28 @@ int kp_usb_endpoint_read_data(kp_usb_device_t *dev, int endpoint, void *buf, int
 // APIs for standard read/write in command mode
 // *********************************************************************************************** //
 
-// int kp_usb_control(kp_usb_device_t *dev, kp_usb_control_t *control_request, int timeout)
-// {
-// 	uint8_t bmRequestType = 0x40;
-// 	uint8_t bRequest = control_request->command;
-// 	uint16_t wValue = control_request->arg1;
-// 	uint16_t wIndex = control_request->arg2;
-// 	unsigned char *data = NULL;
-// 	uint16_t wLength = 0;
+int kp_usb_control(kp_usb_device_t *dev, kp_usb_control_t *control_request, int timeout)
+{
+	uint8_t bmRequestType = 0x40;
+	uint8_t bRequest = control_request->command;
+	uint16_t wValue = control_request->arg1;
+	uint16_t wIndex = control_request->arg2;
+	unsigned char *data = NULL;
+	uint16_t wLength = 0;
 
-// 	int ret = usb_jni_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
+	int ret = usb_jni_control_transfer(dev->usb_handle, bmRequestType, bRequest, wValue, wIndex, data, wLength, timeout);
 
-// 	return ret;
-// }
+	return ret;
+}
 
-// int kp_usb_read_firmware_log(kp_usb_device_t *dev, void *buf, int len, int timeout)
-// {
-// 	int read_len;
+int kp_usb_read_firmware_log(kp_usb_device_t *dev, void *buf, int len, int timeout)
+{
+	int read_len;
 // 	int sts = __kn_usb_interrupt_in(dev, dev->endpoint_log_in, buf, len, &read_len, timeout);
+	int sts = KP_USB_RET_OK;  // Stub
 
-// 	if (sts == KP_USB_RET_OK)
-// 		return read_len;
-// 	else
-// 		return sts;
-// }
+	if (sts == KP_USB_RET_OK)
+		return read_len;
+	else
+		return sts;
+}
