@@ -9,7 +9,8 @@ android {
     namespace = "com.example.kneron_ai_project"
     compileSdk = flutter.compileSdkVersion
     // ndkVersion = flutter.ndkVersion
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "29.0.13599879"
+    // ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -37,6 +38,24 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
+    }
+
+    sourceSets {
+        getByName("main") {
+            jniLibs.srcDirs("src/main/jniLibs")  // Function call - no equals sign
+        }
+    }
+
+        sourceSets {
+        getByName("main") {
+            jniLibs.srcDirs("src/main/jniLibs")  // ✅ Fixed syntax
+        }
+    }
+
+    // Optional: Add packaging options if you encounter conflicts
+    packagingOptions {
+        pickFirst("**/libc++_shared.so")
+        pickFirst("**/libjsc.so")
     }
 }
 

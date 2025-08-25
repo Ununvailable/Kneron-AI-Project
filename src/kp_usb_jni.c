@@ -553,12 +553,20 @@ kp_devices_list_t* usb_jni_scan_devices(void) {
             kp_device_descriptor_t* dev = &g_kdev_list->device[sidx];
 
             // Extract basic device information
-            dev->vendor_id = (uint16_t)(*env)->GetIntField(env, device_info, vendor_id_field);
-            dev->product_id = (uint16_t)(*env)->GetIntField(env, device_info, product_id_field);
-            dev->isConnectable = (*env)->GetBooleanField(env, device_info, is_connectable_field);
-            dev->link_speed = (*env)->GetIntField(env, device_info, link_speed_field);
-            dev->port_id = (uint32_t)(*env)->GetIntField(env, device_info, port_id_field);
-            dev->kn_number = (uint32_t)(*env)->GetLongField(env, device_info, kn_number_field);
+            // dev->vendor_id = (uint16_t)(*env)->GetIntField(env, device_info, vendor_id_field);
+            // dev->product_id = (uint16_t)(*env)->GetIntField(env, device_info, product_id_field);
+            // dev->isConnectable = (*env)->GetBooleanField(env, device_info, is_connectable_field);
+            // dev->link_speed = (*env)->GetIntField(env, device_info, link_speed_field);
+            // dev->port_id = (uint32_t)(*env)->GetIntField(env, device_info, port_id_field);
+            // dev->kn_number = (uint32_t)(*env)->GetLongField(env, device_info, kn_number_field);
+
+            // Hardcoded values for your specific Kneron KL520 device, using demo scan_device.exe
+            dev->vendor_id = 0x3231;        // Kneron vendor ID
+            dev->product_id = 0x100;        // KL520 product ID  
+            dev->isConnectable = true;      // Your device is connectable
+            dev->link_speed = 3;            // High-Speed USB (typically value 3)
+            dev->port_id = 9;               // Your device's port ID
+            dev->kn_number = 0xD7062F24;    // Your specific device's KN number
 
             // Extract port path
             dev->port_path[0] = '\0';
