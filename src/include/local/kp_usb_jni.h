@@ -18,8 +18,8 @@ typedef struct {
     uint16_t product_id;
     uint32_t kn_number;
     uint32_t port_id;
-    char port_path[256];
-    char firmware[64];
+    char port_path[20];
+    char firmware[30];
     bool is_connectable;
     int link_speed;
 } usb_jni_device_info_t;

@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # kl520_usb_plugin:
+  #   path: 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -40,6 +42,7 @@ dependencies:
   image: ^4.1.3
   path_provider: ^2.1.3
   permission_handler: ^11.3.1
+  # services:
   ffi: ^2.0.1
 
 dev_dependencies:

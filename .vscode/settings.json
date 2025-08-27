@@ -14,7 +14,8 @@
         "stdint.h": "c",
         "stdbool.h": "c",
         "kp_core.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "kp_usb_jni.h": "c"
     },
     "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/g++.exe"
 }
