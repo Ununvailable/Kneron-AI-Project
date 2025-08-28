@@ -88,12 +88,13 @@ JNIEnv* usb_jni_get_env(void) {
     return env;
 }
 
-// JNI wrapper for initialization (uncommented and used for actual JNI exports) [9]
+// JNI wrapper for initialization
 JNIEXPORT jint JNICALL Java_kl520_1usb_1plugin_UsbHostBridge_registerNative(JNIEnv* env, jobject thiz) {
+    LOGD("registerNative: g_usb_host_bridge=%p, g_usb_host_bridge_class=%p", g_usb_host_bridge, g_usb_host_bridge_class);
     return usb_jni_initialize(env, thiz);
 }
 
-// JNI wrapper for cleanup (uncommented and used for actual JNI exports) [9]
+// JNI wrapper for cleanup
 JNIEXPORT void JNICALL Java_kl520_1usb_1plugin_UsbHostBridge_cleanupNative(JNIEnv* env, jobject thiz) {
     usb_jni_cleanup(); // Call the C-level cleanup
 }
@@ -232,6 +233,8 @@ int usb_jni_initialize(JNIEnv* env, jobject usb_host_bridge) {
 
     pthread_mutex_unlock(&g_jni_mutex); // [11]
     LOGD("usb_jni_initialize: Initialization successful"); // [12]
+    LOGD("usb_jni_initialize: g_usb_host_bridge=%p, g_usb_host_bridge_class=%p", g_usb_host_bridge, g_usb_host_bridge_class);
+
     return 0;
 }
 
@@ -277,6 +280,7 @@ int usb_jni_finalize(JNIEnv* env) {
 
 // [12]
 usb_device_handle_t* usb_jni_open(uint16_t vendor_id, uint16_t product_id) {
+    LOGE("usb_jni_open: Called");
     if (!g_jvm || !g_usb_host_bridge) {
         LOGE("usb_jni_open: Transport not initialized");
         return NULL;
@@ -727,6 +731,10 @@ kp_devices_list_t* usb_jni_scan_devices(void) {
         pthread_mutex_unlock(&g_jni_mutex);
         return NULL;
     }
+
+    // Debug
+    LOGD("scan_devices: calling on instance ptr=%p class ptr=%p", g_usb_host_bridge, g_usb_host_bridge_class);
+
 
     // Call on the instance (not the class!)
     jobjectArray device_array = (jobjectArray)(*env)->CallObjectMethod(env,

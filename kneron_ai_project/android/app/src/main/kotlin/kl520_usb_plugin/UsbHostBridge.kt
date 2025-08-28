@@ -88,25 +88,25 @@ class UsbHostBridge(private val context: Context) {
             System.loadLibrary("kp_usb_jni") // Make sure this matches your library name
         }
         // --- Native Methods (Instance methods, called by JNI) ---
-        
-        /**
-         * Native method to be implemented in C/C++ via JNI. [2]
-         * This is called from the Kotlin side to initialize the native JNI bridge.
-         * The `jobject thiz` in the C implementation (e.g., `usb_jni_initialize`) will receive this `UsbHostBridge` instance.
-         * @return 0 on success, negative on error.
-         */
-        @JvmStatic
-        external fun registerNative(): Int
-
-        /**
-         * Native method to be implemented in C/C++ via JNI. [2]
-         * This is called from the Kotlin side to clean up native JNI bridge resources.
-         * @return 0 on success, negative on error.
-         */
-        @JvmStatic
-        external fun cleanupNative(): Int // Added Int return type for consistency with registerNative
-
     }
+    
+    /**
+     * Native method to be implemented in C/C++ via JNI. [2]
+     * This is called from the Kotlin side to initialize the native JNI bridge.
+     * The `jobject thiz` in the C implementation (e.g., `usb_jni_initialize`) will receive this `UsbHostBridge` instance.
+     * @return 0 on success, negative on error.
+     */
+    // @JvmStatic
+    external fun registerNative(): Int
+
+    /**
+     * Native method to be implemented in C/C++ via JNI. [2]
+     * This is called from the Kotlin side to clean up native JNI bridge resources.
+     * @return 0 on success, negative on error.
+     */
+    // @JvmStatic
+    external fun cleanupNative(): Int // Added Int return type for consistency with registerNative
+
 
     // --- USB Host Operations (Kotlin-side methods, potentially called from Dart via MethodChannel) ---
 
